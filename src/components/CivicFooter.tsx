@@ -18,7 +18,7 @@ export const CivicFooter: React.FC = () => {
               />
               <div>
                 <span className="font-serif text-base font-semibold text-ink block leading-none">
-                  Asrama Mahasiswa HPMT Jeneponto
+                  BK Asrama HPMT Jeneponto
                 </span>
                 <span className="text-[11px] text-ink-subtle">Kota Makassar, Sulawesi Selatan</span>
               </div>
@@ -122,10 +122,10 @@ export const CivicFooter: React.FC = () => {
         {/* Copyright Bottom Bar */}
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-between text-[11px] text-ink-subtle gap-2">
           <p>
-            © Asrama Mahasiswa HPMT Jeneponto di Makassar. Rawat Persaudaraan, Junjung Siri' na Pacce.
+            © BK Asrama HPMT Jeneponto di Makassar. Rawat Persaudaraan, Junjung Siri' na Pacce.
           </p>
           <div className="flex items-center gap-3">
-            <span>Himpunan Pelajar Mahasiswa Turatea</span>
+            <span>PB HPMT Jeneponto</span>
             <span className="text-line" aria-hidden="true">•</span>
             <span>Makassar</span>
           </div>

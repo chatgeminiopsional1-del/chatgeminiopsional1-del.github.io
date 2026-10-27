@@ -50,10 +50,10 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete }) => {
         {/* Text */}
         <div className="text-center px-6">
           <p className="text-[11px] sm:text-xs uppercase tracking-[0.3em] text-[#baeed9] font-bold mb-2">
-            Badan Khusus Asrama • PB HPMT
+            BK Asrama • PB HPMT
           </p>
           <h1 className="font-serif text-2xl sm:text-3xl font-bold text-white leading-tight">
-            Asrama HPMT Jeneponto
+            BK Asrama HPMT
           </h1>
           <p className="text-[#baeed9]/70 text-xs sm:text-sm mt-2 italic font-serif">
             "Siri' na Pacce ri Butta Turatea"

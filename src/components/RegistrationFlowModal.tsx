@@ -81,7 +81,7 @@ export const RegistrationFlowModal: React.FC<RegistrationFlowModalProps> = ({
         <div className="flex items-start justify-between pb-4 border-b border-line mb-5">
           <div>
             <span className="text-[10px] uppercase font-bold tracking-widest text-forest block mb-1">
-              Badan Khusus Asrama • Panduan Warga Baru
+              BK Asrama HPMT • Panduan Warga Baru
             </span>
             <h2 id="modal-title" className="font-serif text-xl sm:text-2xl text-ink font-semibold">
               Formulir Sowan &amp; Minat Masuk Asrama

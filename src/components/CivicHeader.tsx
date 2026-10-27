@@ -37,19 +37,24 @@ export const CivicHeader: React.FC<CivicHeaderProps> = ({ onOpenRegistration }) 
           {/* Logo & Judul Simpel */}
           <a
             href="#"
-            className="flex items-center gap-2.5 group"
-            aria-label="Beranda Asrama HPMT"
+            className="flex items-center gap-2.5 sm:gap-3 group"
+            aria-label="Beranda BK Asrama HPMT"
           >
             <img
               alt="Logo HPMT"
-              className="w-9 h-9 sm:w-10 sm:h-10 object-contain rounded-sm border border-line bg-white p-0.5 group-hover:border-forest transition-colors"
+              className="w-9 h-9 sm:w-11 sm:h-11 object-contain rounded-sm border border-line bg-white p-0.5 group-hover:border-forest transition-colors shrink-0"
               src={OFFICIAL_LOGOS.emblem}
-              width={40}
-              height={40}
+              width={44}
+              height={44}
             />
-            <span className="font-serif text-lg sm:text-xl font-bold text-forest leading-tight group-hover:text-forest-light transition-colors">
-              Asrama HPMT
-            </span>
+            <div className="min-w-0">
+              <span className="text-[9px] sm:text-[10px] tracking-wider uppercase text-forest font-bold block leading-none mb-0.5">
+                PB HPMT • Jeneponto
+              </span>
+              <span className="font-serif text-lg sm:text-xl font-bold text-forest leading-tight group-hover:text-forest-light transition-colors block">
+                BK Asrama HPMT
+              </span>
+            </div>
           </a>
 
           {/* Navigasi Desktop Simpel */}
