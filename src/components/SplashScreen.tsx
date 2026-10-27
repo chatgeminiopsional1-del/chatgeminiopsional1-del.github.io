@@ -50,7 +50,7 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete }) => {
         {/* Text */}
         <div className="text-center px-6">
           <p className="text-[11px] sm:text-xs uppercase tracking-[0.3em] text-[#baeed9] font-bold mb-2">
-            Badan Khusus Asrama • PP HPMT
+            Badan Khusus Asrama • PB HPMT
           </p>
           <h1 className="font-serif text-2xl sm:text-3xl font-bold text-white leading-tight">
             Asrama HPMT Jeneponto
