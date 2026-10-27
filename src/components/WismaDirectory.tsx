@@ -277,7 +277,7 @@ export const WismaDirectory: React.FC<WismaDirectoryProps> = ({ onSelectUnitForR
               </span>
               <h4 className="font-serif text-lg font-semibold text-ink">
                 {activeMapUnit === 'aspuri'
-                  ? 'ASPURI HPMT Jeneponto — Minasaupa / Kumala'
+                  ? 'ASPURI HPMT Jeneponto — Minasa Upa, Rappocini'
                   : 'ASPURA HPMT Jeneponto — Jl. Anggrek I No. 15, Panakkukang'}
               </h4>
             </div>

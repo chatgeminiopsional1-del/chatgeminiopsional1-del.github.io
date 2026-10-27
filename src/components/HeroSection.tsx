@@ -103,7 +103,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSelectPhoto, onOpenR
               </div>
               <div className="flex items-center justify-between">
                 <span className="text-ink-muted">Unit 02 (Putri):</span>
-                <span className="font-semibold text-ink">Minasaupa, Makassar</span>
+                <span className="font-semibold text-ink">Minasa Upa, Makassar</span>
               </div>
               <div className="flex items-center justify-between">
                 <span className="text-ink-muted">Pengelolaan:</span>

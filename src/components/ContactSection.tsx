@@ -70,7 +70,7 @@ export const ContactSection: React.FC = () => {
                     <span className="text-[10px] sm:text-[11px] uppercase font-bold tracking-wider text-forest">
                       Unit 02 • ASPURI
                     </span>
-                    <span className="text-[11px] text-ink-subtle">Minasaupa</span>
+                    <span className="text-[11px] text-ink-subtle">Minasa Upa</span>
                   </div>
                   <strong className="text-[14px] sm:text-xs font-bold text-ink block">
                     Koordinator Asrama Putri
@@ -91,7 +91,7 @@ export const ContactSection: React.FC = () => {
                   </a>
                   <a
                     className="flex items-center justify-between w-full min-h-[40px] px-4 py-2 bg-white border border-line hover:border-forest text-ink hover:text-forest text-xs font-medium rounded-lg transition-colors"
-                    href="https://www.google.com/maps/place/ASPURI+HPMT+Jeneponto/@-5.1859121,119.4510155,17z/data=!3m1!4b1!4m6!3m5!1s0x2dbee34142ed09d5:0xc905943bb19149b7!8m2!3d-5.1859121!4d119.4510155!16s%2Fg%2F11h0h1vsyq"
+                    href="https://www.google.com/maps/place/Asrama+Putri+Hpmt+kab.+Jeneponto/@-5.185916,119.4510272,17z/data=!4m6!3m5!1s0x2dbee34142ed09d5:0xc905943bb19149b7!8m2!3d-5.185916!4d119.4510272"
                     rel="noopener noreferrer"
                     target="_blank"
                   >

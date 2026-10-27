@@ -55,10 +55,10 @@ export const CivicFooter: React.FC = () => {
               <div>
                 <strong className="text-ink font-serif block">Unit Asrama Putri (Aspuri):</strong>
                 <p className="text-ink-muted">
-                  Kawasan Minasaupa / Jl. Kumala, Kota Makassar, Sulawesi Selatan
+                  Jl. Minasa Upa No. 9 Blok B1, Karunrung, Kec. Rappocini, Kota Makassar, Sulawesi Selatan 90221
                 </p>
                 <a
-                  href="https://www.google.com/maps/place/ASPURI+HPMT+Jeneponto/@-5.1859121,119.4510155,17z/data=!3m1!4b1!4m6!3m5!1s0x2dbee34142ed09d5:0xc905943bb19149b7!8m2!3d-5.1859121!4d119.4510155!16s%2Fg%2F11h0h1vsyq"
+                  href="https://www.google.com/maps/place/Asrama+Putri+Hpmt+kab.+Jeneponto/@-5.185916,119.4510272,17z/data=!4m6!3m5!1s0x2dbee34142ed09d5:0xc905943bb19149b7!8m2!3d-5.185916!4d119.4510272"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-forest font-medium hover:underline text-[10px]"

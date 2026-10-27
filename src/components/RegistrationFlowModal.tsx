@@ -181,7 +181,7 @@ export const RegistrationFlowModal: React.FC<RegistrationFlowModalProps> = ({
                     onChange={() => setFormData({ ...formData, dormitoryChoice: 'aspuri' })}
                     className="accent-forest"
                   />
-                  <span>Aspuri (Putri) — Minasaupa</span>
+                  <span>Aspuri (Putri) — Minasa Upa</span>
                 </label>
               </div>
             </div>

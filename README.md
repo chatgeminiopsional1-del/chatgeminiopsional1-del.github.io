@@ -10,7 +10,7 @@ Website resmi direktori dan panduan warga **Asrama Mahasiswa HPMT (Himpunan Pela
 
 1. **Buku Direktori Dua Wisma Independen**:
    - **Unit 01 - Aspura**: Jl. Anggrek I No. 15, Paropo, Panakkukang ([Titik Resmi Google Maps: Aspura hpmt kab jeneponto](https://www.google.com/maps/place/Aspura+hpmt+kab+jeneponto/data=!4m2!3m1!1s0x0:0x4ca1b970d4be393c)).
-   - **Unit 02 - Aspuri**: Kawasan Minasaupa / Jl. Kumala ([Titik Resmi Google Maps: ASPURI HPMT Jeneponto](https://www.google.com/maps/place/ASPURI+HPMT+Jeneponto/@-5.1859121,119.4510155,17z/data=!3m1!4b1!4m6!3m5!1s0x2dbee34142ed09d5:0xc905943bb19149b7!8m2!3d-5.1859121!4d119.4510155!16s%2Fg%2F11h0h1vsyq)).
+   - **Unit 02 - Aspuri**: Jl. Minasa Upa No. 9 Blok B1, Karunrung, Kec. Rappocini ([Titik Resmi Google Maps: ASPURI HPMT Jeneponto](https://www.google.com/maps/place/ASPURI+HPMT+Jeneponto/@-5.1859121,119.4510155,17z/data=!3m1!4b1!4m6!3m5!1s0x2dbee34142ed09d5:0xc905943bb19149b7!8m2!3d-5.1859121!4d119.4510155!16s%2Fg%2F11h0h1vsyq)).
    - Dilengkapi petunjuk alamat, nomor kontak pengurus, dan peta lokasi interaktif.
 
 2. **Transparansi Fasilitas & Iuran Swakelola Warga**:
@@ -144,7 +144,7 @@ Repositori ini telah dikonfigurasi secara otomatis agar siap berjalan di **GitHu
 - **Badan Pengelola**: Badan Khusus Asrama Pengurus Pusat HPMT
 - **Instagram Resmi**: [@asrama.hpmt](https://www.instagram.com/asrama.hpmt/)
 - **Aspura (Putra)**: Jl. Anggrek I No. 15, Paropo, Panakkukang, Makassar (+62 852-4038-9682)
-- **Aspuri (Putri)**: Kawasan Minasaupa / Jl. Kumala, Makassar (+62 853-9714-2677)
+- **Aspuri (Putri)**: Jl. Minasa Upa No. 9 Blok B1, Karunrung, Kec. Rappocini, Makassar (+62 853-9714-2677)
 
 ---
 
