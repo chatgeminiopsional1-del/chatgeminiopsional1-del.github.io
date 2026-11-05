@@ -25,6 +25,7 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   scroll-behavior: smooth;
+  overscroll-behavior-y: none;
 }
 
 .rule-dotted {
@@ -66,7 +67,7 @@ body {
 
 .reveal {
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(18px);
   transition: opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1), transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .reveal.visible {
@@ -84,7 +85,7 @@ body {
 
 .reveal-left {
   opacity: 0;
-  transform: translateX(-24px);
+  transform: translateX(-20px);
   transition: opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1), transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .reveal-left.visible {
@@ -94,7 +95,7 @@ body {
 
 .reveal-right {
   opacity: 0;
-  transform: translateX(24px);
+  transform: translateX(20px);
   transition: opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1), transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .reveal-right.visible {
@@ -104,7 +105,7 @@ body {
 
 .reveal-scale {
   opacity: 0;
-  transform: scale(0.96);
+  transform: scale(0.97);
   transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .reveal-scale.visible {
@@ -122,36 +123,50 @@ body {
 .delay-600 { transition-delay: 600ms; }
 
 /* ══════════════════════════════════════════════════
-   MOBILE OPTIMIZATIONS
+   MOBILE-NATIVE POLISH (mobile-native skill)
    ══════════════════════════════════════════════════ */
 
+/* Eliminate tap highlight flash across all mobile webkit/blink browsers */
 * {
   -webkit-tap-highlight-color: transparent;
 }
 
-@media (max-width: 374px) {
-  html { font-size: 14px; }
+/* Eliminate 300ms click delay on mobile touch interactions */
+button, a, [role="button"], input, select, textarea {
+  touch-action: manipulation;
 }
 
-.mobile-nav-active {
-  color: #143a2d !important;
-  position: relative;
+/* Prevent accidental text selection on buttons & interactive links */
+button, [role="button"], nav a {
+  user-select: none;
+  -webkit-user-select: none;
 }
-.mobile-nav-active::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 18px;
-  height: 2px;
-  background-color: #143a2d;
-  border-radius: 0 0 2px 2px;
+
+/* Prevent iOS Safari aggressive auto-zoom on input focus (minimum 16px font size on touch) */
+@media (pointer: coarse) {
+  input, textarea, select {
+    font-size: 16px !important;
+  }
+}
+
+/* Utility to hide scrollbars for horizontal pill scrolling on mobile */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@media (max-width: 374px) {
+  html { font-size: 14.5px; }
 }
 
 .img-hover-zoom {
   transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.img-hover-zoom:hover {
-  transform: scale(1.02);
+@media (hover: hover) and (pointer: fine) {
+  .img-hover-zoom:hover {
+    transform: scale(1.02);
+  }
 }

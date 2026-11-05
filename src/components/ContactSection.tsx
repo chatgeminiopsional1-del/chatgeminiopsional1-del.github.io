@@ -6,7 +6,7 @@ export const ContactSection: React.FC = () => {
   const { ref, visible } = useScrollReveal({ threshold: 0.06 });
   return (
     <section className={`max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16 py-16 sm:py-24 reveal ${visible ? "visible" : ""}`} id="kontak-silaturahmi" ref={ref as React.RefObject<HTMLElement>}>
-      <div className="border border-line bg-white rounded-xl p-6 sm:p-10 shadow-xs">
+      <div className="border border-line bg-white rounded-xl p-4.5 sm:p-10 shadow-xs">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           <div className="lg:col-span-7">
             <div className="flex items-center gap-2 mb-2">
@@ -25,7 +25,7 @@ export const ContactSection: React.FC = () => {
             {/* Structured Contact Units for Aspura & Aspuri */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
               {/* ASPURA Card */}
-              <div className="p-5 border border-line bg-paper/60 rounded-xl flex flex-col justify-between hover:border-forest/40 transition-all duration-150">
+              <div className="p-4 sm:p-5 border border-line bg-paper/60 rounded-xl flex flex-col justify-between hover:border-forest/40 transition-all duration-150">
                 <div className="mb-4">
                   <div className="flex items-center justify-between gap-1 mb-1.5">
                     <span className="text-[10px] uppercase font-bold tracking-wider text-forest">

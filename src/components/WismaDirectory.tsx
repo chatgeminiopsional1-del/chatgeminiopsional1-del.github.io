@@ -43,7 +43,7 @@ export const WismaDirectory: React.FC<WismaDirectoryProps> = ({ onSelectUnitForR
       {/* Two Stately Dossier Cards Layout */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
         {/* ── ASPURA CARD ── */}
-        <div className="bg-white border border-line rounded-xl p-6 sm:p-8 shadow-xs hover:shadow-md transition-all duration-200 flex flex-col justify-between">
+        <div className="bg-white border border-line rounded-xl p-4.5 sm:p-8 shadow-xs hover:shadow-md transition-all duration-200 flex flex-col justify-between">
           <div>
             {/* Header Badge */}
             <div className="flex items-center justify-between gap-2 border-b border-line pb-3 mb-4">
@@ -156,7 +156,7 @@ export const WismaDirectory: React.FC<WismaDirectoryProps> = ({ onSelectUnitForR
         </div>
 
         {/* ── ASPURI CARD ── */}
-        <div className="bg-white border border-line rounded-xl p-6 sm:p-8 shadow-xs hover:shadow-md transition-all duration-200 flex flex-col justify-between">
+        <div className="bg-white border border-line rounded-xl p-4.5 sm:p-8 shadow-xs hover:shadow-md transition-all duration-200 flex flex-col justify-between">
           <div>
             {/* Header Badge */}
             <div className="flex items-center justify-between gap-2 border-b border-line pb-3 mb-4">

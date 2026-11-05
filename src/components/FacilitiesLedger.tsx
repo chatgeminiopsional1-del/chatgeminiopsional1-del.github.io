@@ -42,11 +42,11 @@ export const FacilitiesLedger: React.FC = () => {
 
         {/* Search & Category Filter Toolbar */}
         <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 mb-5">
-          <div className="flex flex-wrap items-center gap-2 text-xs sm:text-sm">
+          <div className="flex items-center gap-2 overflow-x-auto no-scrollbar py-1 text-xs sm:text-sm">
             <button
               type="button"
               onClick={() => setSelectedCategory('all')}
-              className={`min-h-[40px] px-4 py-2 rounded-lg font-semibold cursor-pointer transition-all duration-150 ${
+              className={`min-h-[40px] px-4 py-2 rounded-lg font-semibold cursor-pointer transition-all duration-150 whitespace-nowrap shrink-0 ${
                 selectedCategory === 'all'
                   ? 'bg-forest text-paper shadow-xs'
                   : 'bg-white border border-line text-ink hover:bg-paper-muted'
@@ -57,7 +57,7 @@ export const FacilitiesLedger: React.FC = () => {
             <button
               type="button"
               onClick={() => setSelectedCategory('pokok')}
-              className={`min-h-[40px] px-4 py-2 rounded-lg font-semibold cursor-pointer transition-all duration-150 ${
+              className={`min-h-[40px] px-4 py-2 rounded-lg font-semibold cursor-pointer transition-all duration-150 whitespace-nowrap shrink-0 ${
                 selectedCategory === 'pokok'
                   ? 'bg-forest text-paper shadow-xs'
                   : 'bg-white border border-line text-ink hover:bg-paper-muted'
@@ -68,7 +68,7 @@ export const FacilitiesLedger: React.FC = () => {
             <button
               type="button"
               onClick={() => setSelectedCategory('iuran')}
-              className={`min-h-[40px] px-4 py-2 rounded-lg font-semibold cursor-pointer transition-all duration-150 ${
+              className={`min-h-[40px] px-4 py-2 rounded-lg font-semibold cursor-pointer transition-all duration-150 whitespace-nowrap shrink-0 ${
                 selectedCategory === 'iuran'
                   ? 'bg-forest text-paper shadow-xs'
                   : 'bg-white border border-line text-ink hover:bg-paper-muted'
@@ -79,7 +79,7 @@ export const FacilitiesLedger: React.FC = () => {
             <button
               type="button"
               onClick={() => setSelectedCategory('komunal')}
-              className={`min-h-[40px] px-4 py-2 rounded-lg font-semibold cursor-pointer transition-all duration-150 ${
+              className={`min-h-[40px] px-4 py-2 rounded-lg font-semibold cursor-pointer transition-all duration-150 whitespace-nowrap shrink-0 ${
                 selectedCategory === 'komunal'
                   ? 'bg-forest text-paper shadow-xs'
                   : 'bg-white border border-line text-ink hover:bg-paper-muted'
