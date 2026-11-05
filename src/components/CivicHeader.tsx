@@ -79,7 +79,7 @@ export const CivicHeader: React.FC<CivicHeaderProps> = ({ onOpenRegistration }) 
               onClick={() => onOpenRegistration()}
               className="ml-3 inline-flex items-center gap-2 px-4 py-2 bg-forest text-paper text-xs font-semibold rounded-lg hover:bg-forest-deep active:scale-[0.98] transition-all duration-150 shadow-xs cursor-pointer whitespace-nowrap"
             >
-              <span>Ajukan Sowan</span>
+              <span>Daftar Asrama</span>
               <span aria-hidden="true" className="text-xs">→</span>
             </button>
           </nav>
@@ -89,9 +89,9 @@ export const CivicHeader: React.FC<CivicHeaderProps> = ({ onOpenRegistration }) 
             <button
               type="button"
               onClick={() => onOpenRegistration()}
-              className="px-3 py-1.5 text-xs font-bold text-paper bg-forest hover:bg-forest-deep active:scale-[0.97] rounded-lg transition-all cursor-pointer shadow-xs whitespace-nowrap"
+              className="px-3.5 py-1.5 text-xs font-bold text-paper bg-forest hover:bg-forest-deep active:scale-[0.97] rounded-lg transition-all cursor-pointer shadow-xs whitespace-nowrap"
             >
-              Daftar / Sowan
+              Daftar
             </button>
 
             <button
