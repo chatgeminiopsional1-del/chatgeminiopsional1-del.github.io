@@ -1,8 +1,10 @@
 <!doctype html>
-<html lang="id">
+<html lang="id" data-type="place">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="site-kind" content="place" />
+    <meta name="page-type" content="place" />
     
     <!-- Primary SEO Title & Meta -->
     <title>BK Asrama HPMT Jeneponto (Himpunan Pelajar Mahasiswa Turatea) Makassar</title>
@@ -12,11 +14,15 @@
     <meta name="robots" content="index, follow, max-image-preview:large" />
     <link rel="canonical" href="https://www.asramahpmt.my.id/" />
 
-    <!-- Official Favicons for Google Search & Browsers -->
+    <!-- Official Favicons for Google Search & Browsers (Multiple of 48px compliant) -->
     <link rel="icon" type="image/x-icon" href="./favicon.ico" />
-    <link rel="icon" type="image/png" sizes="192x192" href="./favicon.png" />
     <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
+    <link rel="icon" type="image/png" sizes="48x48" href="./favicon-48x48.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="./favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="./favicon-192x192.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
+    <link rel="manifest" href="./site.webmanifest" />
+    <meta name="theme-color" content="#143a2d" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
@@ -37,47 +43,92 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "EducationalOrganization",
-      "name": "BK Asrama HPMT Jeneponto",
-      "legalName": "Badan Khusus Asrama Himpunan Pelajar Mahasiswa Turatea (HPMT) Jeneponto",
-      "alternateName": [
-        "BK Asrama HPMT",
-        "asramahpmt",
-        "Asrama HPMT Jeneponto",
-        "Himpunan Pelajar Mahasiswa Turatea",
-        "HPMT Turatea Jeneponto",
-        "Aspura HPMT Jeneponto",
-        "Aspuri HPMT Jeneponto"
-      ],
-      "disambiguatingDescription": "Asrama mahasiswa daerah resmi untuk pelajar dan mahasiswa asal Kabupaten Jeneponto, Sulawesi Selatan yang menempuh pendidikan di Kota Makassar di bawah naungan PB HPMT (Himpunan Pelajar Mahasiswa Turatea), bukan HPMT Tabalong Kalimantan Selatan.",
-      "url": "https://www.asramahpmt.my.id/",
-      "logo": "https://www.asramahpmt.my.id/logo.png",
-      "image": "https://www.asramahpmt.my.id/logo.png",
-      "description": "Ruang hidup, berteduh, dan silaturahmi mahasiswa Kabupaten Jeneponto (Butta Turatea), Sulawesi Selatan yang menempuh pendidikan tinggi di Kota Makassar.",
-      "areaServed": {
-        "@type": "AdministrativeArea",
-        "name": "Kabupaten Jeneponto, Sulawesi Selatan"
-      },
-      "address": [
+      "@graph": [
         {
-          "@type": "PostalAddress",
-          "streetAddress": "Jl. Anggrek I No. 15, Paropo",
-          "addressLocality": "Makassar",
-          "addressRegion": "Sulawesi Selatan",
-          "postalCode": "90233",
-          "addressCountry": "ID"
+          "@type": "EducationalOrganization",
+          "@id": "https://www.asramahpmt.my.id/#organization",
+          "name": "BK Asrama HPMT Jeneponto",
+          "legalName": "Badan Khusus Asrama Himpunan Pelajar Mahasiswa Turatea (HPMT) Jeneponto",
+          "alternateName": [
+            "BK Asrama HPMT",
+            "asramahpmt",
+            "Asrama HPMT Jeneponto",
+            "Himpunan Pelajar Mahasiswa Turatea",
+            "HPMT Turatea Jeneponto",
+            "Aspura HPMT Jeneponto",
+            "Aspuri HPMT Jeneponto"
+          ],
+          "disambiguatingDescription": "Badan Khusus Asrama mahasiswa daerah resmi untuk pelajar dan mahasiswa asal Kabupaten Jeneponto (Butta Turatea), Sulawesi Selatan yang menempuh pendidikan di Kota Makassar di bawah naungan PB HPMT (Himpunan Pelajar Mahasiswa Turatea). Tidak berkaitan dengan HPMT Tabalong Kalimantan Selatan.",
+          "url": "https://www.asramahpmt.my.id/",
+          "logo": "https://www.asramahpmt.my.id/logo.png",
+          "image": "https://www.asramahpmt.my.id/logo.png",
+          "description": "Ruang hidup, berteduh, dan silaturahmi mahasiswa Kabupaten Jeneponto (Butta Turatea), Sulawesi Selatan yang menempuh pendidikan tinggi di Kota Makassar.",
+          "knowsAbout": [
+            "https://id.wikipedia.org/wiki/Kabupaten_Jeneponto",
+            "https://id.wikipedia.org/wiki/Kota_Makassar"
+          ],
+          "areaServed": {
+            "@type": "AdministrativeArea",
+            "name": "Kabupaten Jeneponto, Sulawesi Selatan"
+          },
+          "parentOrganization": {
+            "@type": "Organization",
+            "name": "Pengurus Besar Himpunan Pelajar Mahasiswa Turatea (PB HPMT Jeneponto)"
+          },
+          "address": [
+            {
+              "@type": "PostalAddress",
+              "streetAddress": "Jl. Anggrek I No. 15, Paropo",
+              "addressLocality": "Makassar",
+              "addressRegion": "Sulawesi Selatan",
+              "postalCode": "90233",
+              "addressCountry": "ID"
+            },
+            {
+              "@type": "PostalAddress",
+              "streetAddress": "Jl. Minasa Upa No. 9 Blok B1, Karunrung",
+              "addressLocality": "Makassar",
+              "addressRegion": "Sulawesi Selatan",
+              "postalCode": "90221",
+              "addressCountry": "ID"
+            }
+          ],
+          "sameAs": [
+            "https://www.instagram.com/asrama.hpmt/"
+          ]
         },
         {
-          "@type": "PostalAddress",
-          "streetAddress": "Jl. Minasa Upa No. 9 Blok B1, Karunrung",
-          "addressLocality": "Makassar",
-          "addressRegion": "Sulawesi Selatan",
-          "postalCode": "90221",
-          "addressCountry": "ID"
+          "@type": "ResidenceHall",
+          "@id": "https://www.asramahpmt.my.id/#aspura",
+          "name": "Aspura HPMT Jeneponto (Asrama Putra)",
+          "containedInPlace": {
+            "@id": "https://www.asramahpmt.my.id/#organization"
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Jl. Anggrek I No. 15, Paropo, Kec. Panakkukang",
+            "addressLocality": "Makassar",
+            "addressRegion": "Sulawesi Selatan",
+            "postalCode": "90233",
+            "addressCountry": "ID"
+          }
+        },
+        {
+          "@type": "ResidenceHall",
+          "@id": "https://www.asramahpmt.my.id/#aspuri",
+          "name": "Aspuri HPMT Jeneponto (Asrama Putri)",
+          "containedInPlace": {
+            "@id": "https://www.asramahpmt.my.id/#organization"
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Jl. Minasa Upa No. 9 Blok B1, Karunrung, Kec. Rappocini",
+            "addressLocality": "Makassar",
+            "addressRegion": "Sulawesi Selatan",
+            "postalCode": "90221",
+            "addressCountry": "ID"
+          }
         }
-      ],
-      "sameAs": [
-        "https://www.instagram.com/asrama.hpmt/"
       ]
     }
     </script>

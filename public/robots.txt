@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
+Sitemap: https://www.asramahpmt.my.id/sitemap.xml
 Sitemap: https://asramahpmt.my.id/sitemap.xml
