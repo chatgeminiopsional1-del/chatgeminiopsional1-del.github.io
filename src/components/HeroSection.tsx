@@ -44,27 +44,27 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSelectPhoto, onOpenR
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 pb-12 border-b border-line items-start">
         {/* Left Column: Title & CTA */}
         <div className={`lg:col-span-7 xl:col-span-8 reveal delay-100 ${heroVisible ? 'visible' : ''}`}>
-          <h1 className="font-serif text-[34px] sm:text-5xl lg:text-[54px] xl:text-[62px] leading-[1.08] tracking-tight font-bold text-ink">
+          <h1 className="font-serif text-[28px] sm:text-5xl lg:text-[54px] xl:text-[62px] leading-[1.12] sm:leading-[1.08] tracking-tight font-bold text-ink">
             Rumah Bersama Mahasiswa Turatea di Perantauan Makassar.
           </h1>
 
-          <p className="mt-5 text-base sm:text-lg text-ink/80 max-w-2xl leading-relaxed">
+          <p className="mt-4 sm:mt-5 text-sm sm:text-lg text-ink/80 max-w-2xl leading-relaxed">
             Wadah berteduh, berhimpun, dan saling memikul nasib di tanah rantau. Bebas biaya sewa kamar bulanan sampai lulus kuliah, dikelola mandiri secara swadaya berlandaskan falsafah luhur <em className="font-serif italic font-semibold text-forest">Siri' na Pacce ri Butta Turatea</em>.
           </p>
 
           {/* Action Buttons */}
-          <div className="mt-8 flex flex-wrap items-center gap-3">
+          <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3">
             <button
               type="button"
               onClick={onOpenRegistration}
-              className="inline-flex items-center justify-center gap-2.5 min-h-[48px] px-6 py-3 bg-forest text-paper text-sm font-semibold rounded-lg hover:bg-forest-deep active:scale-[0.98] transition-all duration-150 shadow-md hover:shadow-lg cursor-pointer"
+              className="inline-flex items-center justify-center gap-2 min-h-[46px] sm:min-h-[48px] px-5 sm:px-6 py-3 bg-forest text-paper text-sm font-semibold rounded-lg hover:bg-forest-deep active:scale-[0.98] transition-all duration-150 shadow-md hover:shadow-lg cursor-pointer w-full sm:w-auto"
             >
               <span>Ajukan Sowan / Pendaftaran</span>
               <span aria-hidden="true" className="text-base font-bold">→</span>
             </button>
             <a
               href="#dua-wisma"
-              className="inline-flex items-center justify-center gap-2 min-h-[48px] px-5 py-3 border border-line bg-white text-ink text-sm font-medium rounded-lg hover:border-forest hover:text-forest active:scale-[0.98] transition-all duration-150 shadow-2xs"
+              className="inline-flex items-center justify-center gap-2 min-h-[46px] sm:min-h-[48px] px-4 sm:px-5 py-3 border border-line bg-white text-ink text-sm font-medium rounded-lg hover:border-forest hover:text-forest active:scale-[0.98] transition-all duration-150 shadow-2xs w-full sm:w-auto"
             >
               <span>Lihat Wisma Aspura &amp; Aspuri</span>
               <span aria-hidden="true">↓</span>
@@ -73,7 +73,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSelectPhoto, onOpenR
               href="https://wa.me/6285240389682?text=Tabe'%20Pengurus%20Asrama%20HPMT,%20saya%20ingin%20bertanya%20mengenai%20info%20penerimaan%20asrama."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-semibold text-forest hover:underline"
+              className="inline-flex items-center justify-center gap-1.5 py-2 text-xs font-semibold text-forest hover:underline"
             >
               <span>Tanya Langsung via WhatsApp</span>
               <span aria-hidden="true">↗</span>
@@ -81,7 +81,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSelectPhoto, onOpenR
           </div>
 
           {/* 4 Architectural Pillar Cards */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-9 pt-7 border-t border-line">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 mt-7 sm:mt-9 pt-6 sm:pt-7 border-t border-line">
             <div className="p-3.5 rounded-lg bg-white border border-line/80 hover:border-forest/40 transition-colors">
               <span className="text-[10px] font-bold uppercase tracking-wider text-forest block">2 Wisma Resmi</span>
               <span className="text-sm font-bold text-ink mt-0.5 block">Aspura &amp; Aspuri</span>
