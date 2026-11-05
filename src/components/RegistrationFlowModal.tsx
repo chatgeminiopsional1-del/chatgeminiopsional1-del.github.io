@@ -11,13 +11,16 @@ interface RegistrationFlowModalProps {
   isOpen: boolean;
   onClose: () => void;
   initialUnit?: 'aspura' | 'aspuri';
+  onShowToast?: (msg: string) => void;
 }
 
 export const RegistrationFlowModal: React.FC<RegistrationFlowModalProps> = ({
   isOpen,
   onClose,
-  initialUnit = 'aspura'
+  initialUnit = 'aspura',
+  onShowToast
 }) => {
+  const [mounted, setMounted] = useState(false);
   const [formData, setFormData] = useState<RegistrationFormData>({
     fullName: '',
     subdistrict: 'Binamu',
@@ -37,6 +40,19 @@ export const RegistrationFlowModal: React.FC<RegistrationFlowModalProps> = ({
   const [step, setStep] = useState<'form' | 'result'>('form');
 
   useEffect(() => {
+    if (isOpen) {
+      setMounted(true);
+      document.body.style.overflow = 'hidden';
+    } else {
+      setMounted(false);
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
+
+  useEffect(() => {
     if (initialUnit) {
       setFormData((prev) => ({ ...prev, dormitoryChoice: initialUnit }));
     }
@@ -53,16 +69,19 @@ export const RegistrationFlowModal: React.FC<RegistrationFlowModalProps> = ({
     const result = validateRegistrationForm(formData);
     if (!result.isValid) {
       setErrors(result.errors);
+      onShowToast?.("Harap lengkapi semua isian bertanda bintang (*)");
       return;
     }
     setErrors({});
     setStep('result');
+    onShowToast?.("Data terverifikasi! Pesan silaturahmi WhatsApp siap dikirim.");
   };
 
   const handleCopyText = async () => {
     try {
       await navigator.clipboard.writeText(formattedMessage);
       setCopied(true);
+      onShowToast?.("Format pesan silaturahmi berhasil disalin ke clipboard!");
       setTimeout(() => setCopied(false), 2500);
     } catch {
       // fallback
@@ -74,9 +93,18 @@ export const RegistrationFlowModal: React.FC<RegistrationFlowModalProps> = ({
       role="dialog"
       aria-modal="true"
       aria-labelledby="modal-title"
-      className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-ink/60 backdrop-blur-xs overflow-y-auto"
+      className={`fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-ink/65 backdrop-blur-sm overflow-y-auto transition-opacity duration-200 ${
+        mounted ? 'opacity-100' : 'opacity-0'
+      }`}
+      onClick={onClose}
     >
-      <div className="relative w-full max-w-2xl bg-paper border border-line rounded-xl shadow-2xl p-5 sm:p-7 max-h-[90vh] overflow-y-auto">
+      <div
+        className={`relative w-full max-w-2xl bg-paper border border-line rounded-2xl shadow-2xl p-5 sm:p-7 max-h-[90vh] overflow-y-auto transition-transform duration-200 ${
+          mounted ? 'scale-100' : 'scale-[0.96]'
+        }`}
+        style={{ transitionTimingFunction: 'cubic-bezier(0.16, 1, 0.3, 1)' }}
+        onClick={(e) => e.stopPropagation()}
+      >
         {/* Header */}
         <div className="flex items-start justify-between pb-4 border-b border-line mb-5">
           <div>
@@ -90,32 +118,32 @@ export const RegistrationFlowModal: React.FC<RegistrationFlowModalProps> = ({
           <button
             type="button"
             onClick={onClose}
-            className="p-1.5 text-ink-subtle hover:text-ink border border-line bg-white rounded-md focus:outline-none cursor-pointer"
+            className="p-2 text-ink-subtle hover:text-ink border border-line bg-white hover:bg-paper-subtle active:scale-[0.96] rounded-lg focus:outline-none cursor-pointer transition-all"
             aria-label="Tutup formulir pendaftaran"
           >
-            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
         </div>
 
         {/* 4-Step Process Breadcrumb */}
-        <div className="mb-4 bg-white p-4 border border-line rounded-lg text-xs">
+        <div className="mb-4 bg-white p-4 border border-line rounded-xl text-xs">
           <span className="font-bold text-ink block mb-2">4 Tahapan Alur Menjadi Warga Asrama:</span>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-[11px] text-ink-muted">
-            <div className="p-2.5 border border-line rounded bg-paper">
+            <div className="p-2.5 border border-line rounded-lg bg-paper">
               <strong className="text-forest block font-bold">1. Isi Formulir</strong>
               Identitas asal Jeneponto &amp; kampus.
             </div>
-            <div className="p-2.5 border border-line rounded bg-paper">
+            <div className="p-2.5 border border-line rounded-lg bg-paper">
               <strong className="text-forest block font-bold">2. Sowan Wisma</strong>
               Datang bertamu &amp; silaturahmi langsung.
             </div>
-            <div className="p-2.5 border border-line rounded bg-paper">
+            <div className="p-2.5 border border-line rounded-lg bg-paper">
               <strong className="text-forest block font-bold">3. Verifikasi</strong>
               Pengecekan KTP/KK &amp; mahasiswa aktif.
             </div>
-            <div className="p-2.5 border border-line rounded bg-paper">
+            <div className="p-2.5 border border-line rounded-lg bg-paper">
               <strong className="text-forest block font-bold">4. Masuk Asrama</strong>
               Penetapan kamar &amp; komitmen tata tertib.
             </div>
@@ -123,7 +151,7 @@ export const RegistrationFlowModal: React.FC<RegistrationFlowModalProps> = ({
         </div>
 
         {/* Ketentuan Biaya & Batas Semester */}
-        <div className="mb-5 p-4 border border-forest/30 bg-forest/5 rounded-lg text-xs text-ink leading-relaxed">
+        <div className="mb-5 p-4 border border-forest/30 bg-forest/5 rounded-xl text-xs text-ink leading-relaxed">
           <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 mb-2 pb-2 border-b border-forest/20">
             <span className="font-bold text-forest uppercase tracking-wider text-[11px]">
               Ketentuan Pokok Masuk Warga
@@ -149,7 +177,7 @@ export const RegistrationFlowModal: React.FC<RegistrationFlowModalProps> = ({
               <label className="font-bold text-ink block mb-2">Pilih Unit Wisma Asrama *</label>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <label
-                  className={`flex items-center gap-2.5 p-3.5 border rounded-lg cursor-pointer transition-all ${
+                  className={`flex items-center gap-2.5 p-3.5 border rounded-xl cursor-pointer transition-all ${
                     formData.dormitoryChoice === 'aspura'
                       ? 'border-forest bg-forest/8 font-bold text-forest ring-1 ring-forest'
                       : 'border-line bg-white text-ink hover:bg-paper-subtle'
@@ -167,7 +195,7 @@ export const RegistrationFlowModal: React.FC<RegistrationFlowModalProps> = ({
                 </label>
 
                 <label
-                  className={`flex items-center gap-2.5 p-3.5 border rounded-lg cursor-pointer transition-all ${
+                  className={`flex items-center gap-2.5 p-3.5 border rounded-xl cursor-pointer transition-all ${
                     formData.dormitoryChoice === 'aspuri'
                       ? 'border-[#8f5727] bg-[#8f5727]/8 font-bold text-[#8f5727] ring-1 ring-[#8f5727]'
                       : 'border-line bg-white text-ink hover:bg-paper-subtle'
@@ -199,7 +227,7 @@ export const RegistrationFlowModal: React.FC<RegistrationFlowModalProps> = ({
                   placeholder="Contoh: Muh. Ilham Pratama"
                   value={formData.fullName}
                   onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                  className="w-full px-3.5 py-2.5 bg-white border border-line rounded-lg focus:border-forest focus:ring-2 focus:ring-forest/20 focus:outline-none"
+                  className="w-full px-3.5 py-2.5 bg-white border border-line rounded-lg focus:border-forest focus:ring-2 focus:ring-forest/20 focus:outline-none transition-all"
                 />
                 {errors.fullName && <p className="text-red-700 text-xs mt-1">{errors.fullName}</p>}
               </div>
@@ -215,7 +243,7 @@ export const RegistrationFlowModal: React.FC<RegistrationFlowModalProps> = ({
                   placeholder="Contoh: 0852xxxxxxxx"
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                  className="w-full px-3.5 py-2.5 bg-white border border-line rounded-lg focus:border-forest focus:ring-2 focus:ring-forest/20 focus:outline-none"
+                  className="w-full px-3.5 py-2.5 bg-white border border-line rounded-lg focus:border-forest focus:ring-2 focus:ring-forest/20 focus:outline-none transition-all"
                 />
                 {errors.phone && <p className="text-red-700 text-xs mt-1">{errors.phone}</p>}
               </div>
@@ -231,7 +259,7 @@ export const RegistrationFlowModal: React.FC<RegistrationFlowModalProps> = ({
                   id="subdistrict"
                   value={formData.subdistrict}
                   onChange={(e) => setFormData({ ...formData, subdistrict: e.target.value })}
-                  className="w-full px-3.5 py-2.5 bg-white border border-line rounded-lg focus:border-forest focus:ring-2 focus:ring-forest/20 focus:outline-none"
+                  className="w-full px-3.5 py-2.5 bg-white border border-line rounded-lg focus:border-forest focus:ring-2 focus:ring-forest/20 focus:outline-none transition-all"
                 >
                   {JENEPONTO_SUBDISTRICTS.map((sub) => (
                     <option key={sub} value={sub}>
@@ -252,7 +280,7 @@ export const RegistrationFlowModal: React.FC<RegistrationFlowModalProps> = ({
                   placeholder="Contoh: Empoang / Tompobulu"
                   value={formData.villageName}
                   onChange={(e) => setFormData({ ...formData, villageName: e.target.value })}
-                  className="w-full px-3.5 py-2.5 bg-white border border-line rounded-lg focus:border-forest focus:ring-2 focus:ring-forest/20 focus:outline-none"
+                  className="w-full px-3.5 py-2.5 bg-white border border-line rounded-lg focus:border-forest focus:ring-2 focus:ring-forest/20 focus:outline-none transition-all"
                 />
               </div>
             </div>
@@ -270,7 +298,7 @@ export const RegistrationFlowModal: React.FC<RegistrationFlowModalProps> = ({
                   placeholder="Contoh: UNHAS / UNM / UIN"
                   value={formData.campusName}
                   onChange={(e) => setFormData({ ...formData, campusName: e.target.value })}
-                  className="w-full px-3.5 py-2.5 bg-white border border-line rounded-lg focus:border-forest focus:ring-2 focus:ring-forest/20 focus:outline-none"
+                  className="w-full px-3.5 py-2.5 bg-white border border-line rounded-lg focus:border-forest focus:ring-2 focus:ring-forest/20 focus:outline-none transition-all"
                 />
                 {errors.campusName && <p className="text-red-700 text-xs mt-1">{errors.campusName}</p>}
               </div>
@@ -286,7 +314,7 @@ export const RegistrationFlowModal: React.FC<RegistrationFlowModalProps> = ({
                   placeholder="Contoh: Ilmu Hukum"
                   value={formData.studyProgram}
                   onChange={(e) => setFormData({ ...formData, studyProgram: e.target.value })}
-                  className="w-full px-3.5 py-2.5 bg-white border border-line rounded-lg focus:border-forest focus:ring-2 focus:ring-forest/20 focus:outline-none"
+                  className="w-full px-3.5 py-2.5 bg-white border border-line rounded-lg focus:border-forest focus:ring-2 focus:ring-forest/20 focus:outline-none transition-all"
                 />
                 {errors.studyProgram && <p className="text-red-700 text-xs mt-1">{errors.studyProgram}</p>}
               </div>
@@ -302,7 +330,7 @@ export const RegistrationFlowModal: React.FC<RegistrationFlowModalProps> = ({
                   id="currentSemester"
                   value={formData.currentSemester}
                   onChange={(e) => setFormData({ ...formData, currentSemester: e.target.value })}
-                  className="w-full px-3.5 py-2.5 bg-white border border-line rounded-lg focus:border-forest focus:ring-2 focus:ring-forest/20 focus:outline-none"
+                  className="w-full px-3.5 py-2.5 bg-white border border-line rounded-lg focus:border-forest focus:ring-2 focus:ring-forest/20 focus:outline-none transition-all"
                 >
                   <option value="Semester 1 (Mahasiswa Baru)">Semester 1 (Mahasiswa Baru)</option>
                   <option value="Semester 2">Semester 2</option>
@@ -310,7 +338,7 @@ export const RegistrationFlowModal: React.FC<RegistrationFlowModalProps> = ({
                   <option value="Di atas Semester 3 (Ketentuan Khusus)">Di atas Semester 3 (Ketentuan Khusus)</option>
                 </select>
                 {formData.currentSemester?.includes('Di atas Semester 3') && (
-                  <p className="text-amber-900 text-xs mt-1.5 p-2 bg-amber-50 border border-amber-300 rounded">
+                  <p className="text-amber-900 text-xs mt-1.5 p-2 bg-amber-50 border border-amber-300 rounded-lg">
                     Pendaftar di atas semester 3 wajib menyertakan keterangan alasan atau rekomendasi organisasi pada catatan di bawah untuk pertimbangan khusus pengurus.
                   </p>
                 )}
@@ -328,7 +356,7 @@ export const RegistrationFlowModal: React.FC<RegistrationFlowModalProps> = ({
                   placeholder="2024"
                   value={formData.batchYear}
                   onChange={(e) => setFormData({ ...formData, batchYear: e.target.value })}
-                  className="w-full px-3.5 py-2.5 bg-white border border-line rounded-lg focus:border-forest focus:ring-2 focus:ring-forest/20 focus:outline-none"
+                  className="w-full px-3.5 py-2.5 bg-white border border-line rounded-lg focus:border-forest focus:ring-2 focus:ring-forest/20 focus:outline-none transition-all"
                 />
                 {errors.batchYear && <p className="text-red-700 text-xs mt-1">{errors.batchYear}</p>}
               </div>
@@ -346,7 +374,7 @@ export const RegistrationFlowModal: React.FC<RegistrationFlowModalProps> = ({
                 placeholder="Nama ayah / ibu / wali"
                 value={formData.parentName}
                 onChange={(e) => setFormData({ ...formData, parentName: e.target.value })}
-                className="w-full px-3.5 py-2.5 bg-white border border-line rounded-lg focus:border-forest focus:ring-2 focus:ring-forest/20 focus:outline-none"
+                className="w-full px-3.5 py-2.5 bg-white border border-line rounded-lg focus:border-forest focus:ring-2 focus:ring-forest/20 focus:outline-none transition-all"
               />
               {errors.parentName && <p className="text-red-700 text-xs mt-1">{errors.parentName}</p>}
             </div>
@@ -362,7 +390,7 @@ export const RegistrationFlowModal: React.FC<RegistrationFlowModalProps> = ({
                 placeholder="Rencana jadwal tiba di Makassar, barang bawaan, dll..."
                 value={formData.notes}
                 onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-                className="w-full px-3.5 py-2.5 bg-white border border-line rounded-lg focus:border-forest focus:ring-2 focus:ring-forest/20 focus:outline-none"
+                className="w-full px-3.5 py-2.5 bg-white border border-line rounded-lg focus:border-forest focus:ring-2 focus:ring-forest/20 focus:outline-none transition-all"
               />
             </div>
 
@@ -370,7 +398,7 @@ export const RegistrationFlowModal: React.FC<RegistrationFlowModalProps> = ({
               <button
                 type="button"
                 onClick={onClose}
-                className="min-h-[46px] px-5 py-2.5 border border-line bg-white hover:bg-paper-subtle text-ink font-semibold rounded-lg cursor-pointer transition-colors"
+                className="min-h-[46px] px-5 py-2.5 border border-line bg-white hover:bg-paper-subtle active:scale-[0.98] text-ink font-semibold rounded-lg cursor-pointer transition-all"
               >
                 Batal
               </button>
@@ -384,13 +412,13 @@ export const RegistrationFlowModal: React.FC<RegistrationFlowModalProps> = ({
           </form>
         ) : (
           <div className="space-y-4 text-xs">
-            <div className="p-3.5 bg-emerald-50 border border-emerald-200 text-emerald-900 rounded-lg">
+            <div className="p-3.5 bg-emerald-50 border border-emerald-200 text-emerald-900 rounded-xl">
               <span className="font-bold block mb-1 text-sm">Format Pesan Silaturahmi Telah Siap</span>
               Pesan di bawah dirancang sesuai tata krama tradisi perantau Turatea kepada pengurus {targetUnit.shortName}.
             </div>
 
             {/* Preview Box */}
-            <div className="p-4 bg-white border border-line rounded-lg font-mono text-xs whitespace-pre-wrap text-ink-muted leading-relaxed max-h-56 overflow-y-auto">
+            <div className="p-4 bg-white border border-line rounded-xl font-mono text-xs whitespace-pre-wrap text-ink-muted leading-relaxed max-h-56 overflow-y-auto">
               {formattedMessage}
             </div>
 
@@ -409,9 +437,9 @@ export const RegistrationFlowModal: React.FC<RegistrationFlowModalProps> = ({
               <button
                 type="button"
                 onClick={handleCopyText}
-                className="w-full sm:w-auto py-3 px-4 border border-line bg-white hover:bg-paper-subtle font-semibold text-ink rounded-lg cursor-pointer transition-colors"
+                className="w-full sm:w-auto py-3 px-4 border border-line bg-white hover:bg-paper-subtle active:scale-[0.98] font-semibold text-ink rounded-lg cursor-pointer transition-all"
               >
-                {copied ? 'Berhasil Disalin' : 'Salin Pesan'}
+                {copied ? '✓ Berhasil Disalin' : 'Salin Pesan'}
               </button>
 
               <button

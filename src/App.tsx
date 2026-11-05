@@ -11,6 +11,7 @@ import { RegistrationFlowModal } from './components/RegistrationFlowModal.tsx';
 import { ImageLightbox } from './components/ImageLightbox.tsx';
 import { MobileBottomNav } from './components/MobileBottomNav.tsx';
 import { SplashScreen } from './components/SplashScreen.tsx';
+import { Toast, ToastItem } from './components/Toast.tsx';
 import type { ArchivalPhoto } from './data/dormitoryData.ts';
 
 export default function App() {
@@ -18,6 +19,16 @@ export default function App() {
   const [registrationUnit, setRegistrationUnit] = useState<'aspura' | 'aspuri'>('aspura');
   const [selectedPhoto, setSelectedPhoto] = useState<ArchivalPhoto | null>(null);
   const [splashDone, setSplashDone] = useState(false);
+  const [toasts, setToasts] = useState<ToastItem[]>([]);
+
+  const showToast = useCallback((message: string, type: 'success' | 'info' = 'success') => {
+    const id = Date.now().toString() + Math.random().toString(36).substring(2, 5);
+    setToasts((prev) => [...prev.slice(-2), { id, message, type }]);
+  }, []);
+
+  const dismissToast = useCallback((id: string) => {
+    setToasts((prev) => prev.filter((t) => t.id !== id));
+  }, []);
 
   const handleOpenRegistration = (unit: 'aspura' | 'aspuri' = 'aspura') => {
     setRegistrationUnit(unit);
@@ -77,6 +88,7 @@ export default function App() {
           isOpen={isRegistrationOpen}
           onClose={() => setIsRegistrationOpen(false)}
           initialUnit={registrationUnit}
+          onShowToast={showToast}
         />
 
         {/* Image Lightbox Viewer */}
@@ -85,6 +97,9 @@ export default function App() {
           onClose={() => setSelectedPhoto(null)}
           onSelectPhoto={setSelectedPhoto}
         />
+
+        {/* Floating Toast Notification Stack (Emil Kowalski / Sonner pattern) */}
+        <Toast toasts={toasts} onDismiss={dismissToast} />
       </div>
     </>
   );

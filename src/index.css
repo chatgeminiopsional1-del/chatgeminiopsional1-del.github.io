@@ -6,8 +6,8 @@
   --color-paper-muted: #ebe6d8;
   --color-paper-dark: #ded8c7;
   --color-ink: #1c221e;
-  --color-ink-muted: #556059;
-  --color-ink-subtle: #7d8b82;
+  --color-ink-muted: #435148;
+  --color-ink-subtle: #627268;
   --color-forest: #143a2d;
   --color-forest-deep: #0c261e;
   --color-forest-light: #1b4d3e;
@@ -43,56 +43,69 @@ body {
 }
 
 /* ══════════════════════════════════════════════════
-   SCROLL-REVEAL ANIMATIONS
+   ACCESSIBILITY & FOCUS (Impeccable a11y)
    ══════════════════════════════════════════════════ */
 
-/* Fade up — default reveal */
+*:focus-visible {
+  outline: 2px solid var(--color-forest, #143a2d);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ══════════════════════════════════════════════════
+   SCROLL-REVEAL ANIMATIONS (Emil Kowalski curve)
+   ══════════════════════════════════════════════════ */
+
 .reveal {
   opacity: 0;
-  transform: translateY(22px);
-  transition: opacity 0.65s ease, transform 0.65s ease;
+  transform: translateY(20px);
+  transition: opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1), transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Fade in only (for wide/banner elements) */
 .reveal-fade {
   opacity: 0;
-  transition: opacity 0.7s ease;
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .reveal-fade.visible {
   opacity: 1;
 }
 
-/* Slide in from left */
 .reveal-left {
   opacity: 0;
-  transform: translateX(-28px);
-  transition: opacity 0.65s ease, transform 0.65s ease;
+  transform: translateX(-24px);
+  transition: opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1), transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .reveal-left.visible {
   opacity: 1;
   transform: translateX(0);
 }
 
-/* Slide in from right */
 .reveal-right {
   opacity: 0;
-  transform: translateX(28px);
-  transition: opacity 0.65s ease, transform 0.65s ease;
+  transform: translateX(24px);
+  transition: opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1), transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .reveal-right.visible {
   opacity: 1;
   transform: translateX(0);
 }
 
-/* Scale up (for cards) */
 .reveal-scale {
   opacity: 0;
   transform: scale(0.96);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .reveal-scale.visible {
   opacity: 1;
@@ -112,17 +125,14 @@ body {
    MOBILE OPTIMIZATIONS
    ══════════════════════════════════════════════════ */
 
-/* Remove tap highlight on mobile */
 * {
   -webkit-tap-highlight-color: transparent;
 }
 
-/* Larger base font on very small screens */
 @media (max-width: 374px) {
   html { font-size: 14px; }
 }
 
-/* ── Active state on mobile nav ───────────────────── */
 .mobile-nav-active {
   color: #143a2d !important;
   position: relative;
@@ -139,19 +149,9 @@ body {
   border-radius: 0 0 2px 2px;
 }
 
-/* ── Image hover: scale slightly ───────────────────── */
 .img-hover-zoom {
-  transition: transform 0.35s ease;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .img-hover-zoom:hover {
-  transform: scale(1.03);
-}
-
-/* ── Pulse dot animation ───────────────────────────── */
-@keyframes pulse-dot {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.3; }
-}
-.animate-pulse-dot {
-  animation: pulse-dot 2s ease-in-out infinite;
+  transform: scale(1.02);
 }
