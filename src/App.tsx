@@ -9,7 +9,6 @@ import { ContactSection } from './components/ContactSection.tsx';
 import { CivicFooter } from './components/CivicFooter.tsx';
 import { RegistrationFlowModal } from './components/RegistrationFlowModal.tsx';
 import { ImageLightbox } from './components/ImageLightbox.tsx';
-import { MobileBottomNav } from './components/MobileBottomNav.tsx';
 import { SplashScreen } from './components/SplashScreen.tsx';
 import { Toast, ToastItem } from './components/Toast.tsx';
 import type { ArchivalPhoto } from './data/dormitoryData.ts';
@@ -54,7 +53,7 @@ export default function App() {
         <CivicHeader onOpenRegistration={handleOpenRegistration} />
 
         {/* Main Content Area */}
-        <main className="w-full flex-1 pb-20 lg:pb-0">
+        <main className="w-full flex-1">
           {/* Hero Section with Documentary Photography */}
           <HeroSection
             onSelectPhoto={setSelectedPhoto}
@@ -79,9 +78,6 @@ export default function App() {
 
         {/* Grounded Civic Footer */}
         <CivicFooter />
-
-        {/* Persistent Bottom Navigation for Mobile Phone */}
-        <MobileBottomNav onOpenRegistration={() => handleOpenRegistration('aspura')} />
 
         {/* Registration & Sowan Inquiry Modal */}
         <RegistrationFlowModal

@@ -16,7 +16,7 @@ export const Toast: React.FC<ToastProps> = ({ toasts, onDismiss }) => {
     <div
       aria-live="polite"
       aria-atomic="true"
-      className="fixed bottom-20 lg:bottom-6 right-4 sm:right-6 z-50 flex flex-col gap-2 max-w-sm w-full pointer-events-none"
+      className="fixed bottom-6 right-4 sm:right-6 z-50 flex flex-col gap-2 max-w-sm w-full pointer-events-none"
     >
       {toasts.map((toast) => (
         <ToastCard key={toast.id} toast={toast} onDismiss={() => onDismiss(toast.id)} />
