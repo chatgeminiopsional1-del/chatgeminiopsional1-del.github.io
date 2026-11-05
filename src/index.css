@@ -1,26 +1,26 @@
 @import "tailwindcss";
 
 @theme {
-  --color-paper: #f7f4ed;
-  --color-paper-subtle: #f2eee3;
-  --color-paper-muted: #ebe6d8;
-  --color-paper-dark: #ded8c7;
-  --color-ink: #1c221e;
-  --color-ink-muted: #435148;
-  --color-ink-subtle: #627268;
-  --color-forest: #143a2d;
-  --color-forest-deep: #0c261e;
-  --color-forest-light: #1b4d3e;
-  --color-clay: #8f5727;
-  --color-line: #d8d2c4;
+  --color-paper: #f8fafc;
+  --color-paper-subtle: #f0f6fc;
+  --color-paper-muted: #e2e8f0;
+  --color-paper-dark: #cbd5e1;
+  --color-ink: #0f172a;
+  --color-ink-muted: #334155;
+  --color-ink-subtle: #64748b;
+  --color-forest: #0f3b75;
+  --color-forest-deep: #071d37;
+  --color-forest-light: #0284c7;
+  --color-clay: #0284c7;
+  --color-line: #e2e8f0;
 
   --font-serif: "Fraunces", Georgia, serif;
   --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 body {
-  background-color: #f7f4ed;
-  color: #1c221e;
+  background-color: #f8fafc;
+  color: #0f172a;
   font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -28,7 +28,7 @@ body {
 }
 
 .rule-dotted {
-  background-image: linear-gradient(to right, #d8d2c4 40%, rgba(255,255,255,0) 0%);
+  background-image: linear-gradient(to right, #cbd5e1 40%, rgba(255,255,255,0) 0%);
   background-position: bottom;
   background-size: 6px 1px;
   background-repeat: repeat-x;
@@ -47,7 +47,7 @@ body {
    ══════════════════════════════════════════════════ */
 
 *:focus-visible {
-  outline: 2px solid var(--color-forest, #143a2d);
+  outline: 2px solid var(--color-forest, #0f3b75);
   outline-offset: 2px;
 }
 
@@ -134,7 +134,7 @@ body {
 }
 
 .mobile-nav-active {
-  color: #143a2d !important;
+  color: #0f3b75 !important;
   position: relative;
 }
 .mobile-nav-active::before {
@@ -145,7 +145,7 @@ body {
   transform: translateX(-50%);
   width: 18px;
   height: 2px;
-  background-color: #143a2d;
+  background-color: #0f3b75;
   border-radius: 0 0 2px 2px;
 }
 

@@ -412,7 +412,7 @@ export const RegistrationFlowModal: React.FC<RegistrationFlowModalProps> = ({
           </form>
         ) : (
           <div className="space-y-4 text-xs">
-            <div className="p-3.5 bg-emerald-50 border border-emerald-200 text-emerald-900 rounded-xl">
+            <div className="p-3.5 bg-sky-50 border border-sky-200 text-sky-950 rounded-xl">
               <span className="font-bold block mb-1 text-sm">Format Pesan Silaturahmi Telah Siap</span>
               Pesan di bawah dirancang sesuai tata krama tradisi perantau Turatea kepada pengurus {targetUnit.shortName}.
             </div>
