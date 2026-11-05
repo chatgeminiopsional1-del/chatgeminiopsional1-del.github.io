@@ -117,7 +117,7 @@ export const WismaDirectory: React.FC<WismaDirectoryProps> = ({ onSelectUnitForR
           {/* Action Buttons */}
           <div className="pt-2 space-y-3">
             <a
-              className="flex items-center justify-between w-full px-4 py-3 rounded-lg bg-sky-500/10 hover:bg-sky-500/20 text-sky-950 border border-sky-500/25 text-xs sm:text-sm font-semibold transition-all duration-150"
+              className="flex items-center justify-between w-full px-4 py-3 rounded-lg bg-emerald-800/10 hover:bg-emerald-800/20 text-emerald-900 border border-emerald-800/20 text-xs sm:text-sm font-semibold transition-all duration-150"
               href={generateWhatsAppUrl(aspura.whatsappNumber, aspuraWaText)}
               rel="noopener noreferrer"
               target="_blank"
@@ -230,7 +230,7 @@ export const WismaDirectory: React.FC<WismaDirectoryProps> = ({ onSelectUnitForR
           {/* Action Buttons */}
           <div className="pt-2 space-y-3">
             <a
-              className="flex items-center justify-between w-full px-4 py-3 rounded-lg bg-sky-500/10 hover:bg-sky-500/20 text-sky-950 border border-sky-500/25 text-xs sm:text-sm font-semibold transition-all duration-150"
+              className="flex items-center justify-between w-full px-4 py-3 rounded-lg bg-emerald-800/10 hover:bg-emerald-800/20 text-emerald-900 border border-emerald-800/20 text-xs sm:text-sm font-semibold transition-all duration-150"
               href={generateWhatsAppUrl(aspuri.whatsappNumber, aspuriWaText)}
               rel="noopener noreferrer"
               target="_blank"

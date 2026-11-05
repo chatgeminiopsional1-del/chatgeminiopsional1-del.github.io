@@ -4,8 +4,8 @@
   "description": "Website Resmi Asrama Mahasiswa Turatea Jeneponto di Makassar — Aspura Panakkukang & Aspuri Minasa Upa.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#f8fafc",
-  "theme_color": "#0f3b75",
+  "background_color": "#f7f4ed",
+  "theme_color": "#143a2d",
   "icons": [
     {
       "src": "/favicon-48x48.png",

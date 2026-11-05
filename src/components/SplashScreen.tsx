@@ -21,7 +21,7 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete }) => {
 
   return (
     <div
-      className={`fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-[#071d37] transition-all duration-500 ${
+      className={`fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-forest transition-all duration-500 ${
         phase === 'exit' ? 'opacity-0 scale-[1.03] pointer-events-none' : 'opacity-100 scale-100'
       }`}
       aria-hidden="true"
@@ -44,18 +44,18 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete }) => {
             />
           </div>
           {/* Pulse ring */}
-          <div className="absolute inset-0 rounded-full border-2 border-[#38bdf8]/40 animate-ping" />
+          <div className="absolute inset-0 rounded-full border-2 border-[#baeed9]/40 animate-ping" />
         </div>
 
         {/* Text */}
         <div className="text-center px-6">
-          <p className="text-[11px] sm:text-xs uppercase tracking-[0.3em] text-[#38bdf8] font-bold mb-2">
+          <p className="text-[11px] sm:text-xs uppercase tracking-[0.3em] text-[#baeed9] font-bold mb-2">
             BK Asrama • PB HPMT
           </p>
           <h1 className="font-serif text-2xl sm:text-3xl font-bold text-white leading-tight">
             BK Asrama HPMT
           </h1>
-          <p className="text-[#38bdf8]/80 text-xs sm:text-sm mt-2 italic font-serif">
+          <p className="text-[#baeed9]/70 text-xs sm:text-sm mt-2 italic font-serif">
             "Siri' na Pacce ri Butta Turatea"
           </p>
         </div>
@@ -63,7 +63,7 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete }) => {
         {/* Loading bar */}
         <div className="w-32 h-0.5 bg-white/10 rounded-full overflow-hidden mt-1">
           <div
-            className={`h-full bg-[#38bdf8] rounded-full transition-all duration-[1800ms] ease-out ${
+            className={`h-full bg-[#baeed9] rounded-full transition-all duration-[1800ms] ease-out ${
               phase === 'hold' || phase === 'exit' ? 'w-full' : 'w-0'
             }`}
           />
