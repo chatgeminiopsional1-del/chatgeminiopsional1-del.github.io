@@ -30,8 +30,8 @@ export const CivicFooter: React.FC = () => {
               “Siri' na Pacce ri Butta Turatea — Menjaga Martabat dan Solidaritas di Tanah Perantauan.”
             </p>
             <div className="p-3 bg-white/70 border border-line rounded-lg text-[11px] text-ink/75 leading-relaxed">
-              <strong className="text-forest font-semibold block mb-0.5">Catatan Penegasan Entitas:</strong>
-              Website ini adalah domain resmi Badan Khusus Asrama PB HPMT (Himpunan Pelajar Mahasiswa Turatea) Kabupaten Jeneponto, Sulawesi Selatan. Tidak terafiliasi dengan organisasi HPMT Tabalong (Kalimantan Selatan).
+              <strong className="text-forest font-semibold block mb-0.5">Pengurus Besar HPMT:</strong>
+              Website resmi Badan Khusus Asrama PB HPMT (Himpunan Pelajar Mahasiswa Turatea) Kabupaten Jeneponto, Sulawesi Selatan di Kota Makassar.
             </div>
           </div>
 

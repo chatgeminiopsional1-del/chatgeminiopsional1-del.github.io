@@ -31,11 +31,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSelectPhoto, onOpenR
             <span className="relative inline-flex rounded-full h-2 w-2 bg-forest" />
           </span>
           <span className="font-bold tracking-wide uppercase text-[11px]">
-            BK Asrama PB HPMT Jeneponto (Makassar)
+            BK Asrama PB HPMT Jeneponto di Makassar
           </span>
           <span className="text-forest/40 hidden sm:inline" aria-hidden="true">•</span>
           <span className="text-forest/85 text-[11px]">
-            Himpunan Pelajar Mahasiswa Turatea (Sulsel) — <em>Bukan HPMT Tabalong</em>
+            Himpunan Pelajar Mahasiswa Turatea (Sulawesi Selatan)
           </span>
         </div>
       </div>
