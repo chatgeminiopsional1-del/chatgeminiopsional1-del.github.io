@@ -439,7 +439,7 @@ export const RegistrationFlowModal: React.FC<RegistrationFlowModalProps> = ({
                 onClick={handleCopyText}
                 className="w-full sm:w-auto py-3 px-4 border border-line bg-white hover:bg-paper-subtle active:scale-[0.98] font-semibold text-ink rounded-lg cursor-pointer transition-all"
               >
-                {copied ? '✓ Berhasil Disalin' : 'Salin Pesan'}
+                {copied ? 'Berhasil Disalin' : 'Salin Pesan'}
               </button>
 
               <button

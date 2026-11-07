@@ -63,7 +63,7 @@ export const WismaDirectory: React.FC<WismaDirectoryProps> = ({ onSelectUnitForR
               : 'bg-white border border-line/80 text-ink hover:bg-paper-subtle active:scale-[0.98]'
           }`}
         >
-          🏢 Wisma Putra (Panakkukang)
+          Wisma Putra (Panakkukang)
         </button>
         <button
           type="button"
@@ -74,7 +74,7 @@ export const WismaDirectory: React.FC<WismaDirectoryProps> = ({ onSelectUnitForR
               : 'bg-white border border-line/80 text-ink hover:bg-paper-subtle active:scale-[0.98]'
           }`}
         >
-          🏡 Wisma Putri (Minasa Upa)
+          Wisma Putri (Minasa Upa)
         </button>
       </div>
 
