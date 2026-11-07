@@ -430,7 +430,7 @@ export const RegistrationFlowModal: React.FC<RegistrationFlowModalProps> = ({
                 rel="noopener noreferrer"
                 className="w-full sm:flex-1 py-3 px-5 bg-forest text-paper hover:bg-forest-deep active:scale-[0.98] text-center font-bold text-xs rounded-lg flex items-center justify-center gap-2 shadow-xs transition-all"
               >
-                <span>Kirim Langsung ke WhatsApp Pengurus ({targetUnit.coordinatorPhone})</span>
+                <span>Kirim ke WhatsApp Koordinator ({targetUnit.coordinatorName} • {targetUnit.coordinatorPhone})</span>
                 <span aria-hidden="true">↗</span>
               </a>
 

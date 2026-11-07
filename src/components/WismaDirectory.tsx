@@ -144,7 +144,7 @@ export const WismaDirectory: React.FC<WismaDirectoryProps> = ({ onSelectUnitForR
                 </div>
                 <div className="py-2.5 flex flex-col sm:flex-row sm:justify-between gap-1 sm:gap-4">
                   <dt className="text-xs uppercase font-bold tracking-wider text-forest">Narahubung</dt>
-                  <dd className="text-xs text-ink font-medium sm:text-right">{aspura.coordinatorTitle}</dd>
+                  <dd className="text-xs text-ink font-semibold sm:text-right">{aspura.coordinatorName} ({aspura.coordinatorTitle})</dd>
                 </div>
               </dl>
             </div>
@@ -262,7 +262,7 @@ export const WismaDirectory: React.FC<WismaDirectoryProps> = ({ onSelectUnitForR
                 </div>
                 <div className="py-2.5 flex flex-col sm:flex-row sm:justify-between gap-1 sm:gap-4">
                   <dt className="text-xs uppercase font-bold tracking-wider text-[#8f5727]">Narahubung</dt>
-                  <dd className="text-xs text-ink font-medium sm:text-right">{aspuri.coordinatorTitle}</dd>
+                  <dd className="text-xs text-ink font-semibold sm:text-right">{aspuri.coordinatorName} ({aspuri.coordinatorTitle})</dd>
                 </div>
               </dl>
             </div>

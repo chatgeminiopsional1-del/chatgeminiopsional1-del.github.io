@@ -33,9 +33,8 @@ export const ContactSection: React.FC = () => {
                     </span>
                     <span className="text-xs text-ink-subtle">Panakkukang</span>
                   </div>
-                  <strong className="text-sm font-bold text-ink block">
-                    Koordinator Asrama Putra
-                  </strong>
+                  <strong className="text-sm font-bold text-ink block">Muh. Fatur Idris</strong>
+                  <span className="text-xs text-ink-subtle block">Koordinator Asrama Putra</span>
                   <span className="text-sm text-forest font-bold block mt-1 font-mono">
                     +62 852-4038-9682
                   </span>
@@ -71,9 +70,8 @@ export const ContactSection: React.FC = () => {
                     </span>
                     <span className="text-xs text-ink-subtle">Minasa Upa</span>
                   </div>
-                  <strong className="text-sm font-bold text-ink block">
-                    Koordinator Asrama Putri
-                  </strong>
+                  <strong className="text-sm font-bold text-ink block">Nurul Mawaddah</strong>
+                  <span className="text-xs text-ink-subtle block">Koordinator Asrama Putri</span>
                   <span className="text-sm text-[#8f5727] font-bold block mt-1 font-mono">
                     +62 853-9714-2677
                   </span>

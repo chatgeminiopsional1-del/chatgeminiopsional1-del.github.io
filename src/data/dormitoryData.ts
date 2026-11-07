@@ -10,6 +10,7 @@ export interface DormitoryUnit {
   environmentCharacter: string;
   curfewAndSecurity: string;
   roomCapacity: string;
+  coordinatorName: string;
   coordinatorTitle: string;
   coordinatorPhone: string;
   whatsappNumber: string;
@@ -55,6 +56,7 @@ export const DORMITORY_UNITS: DormitoryUnit[] = [
     environmentCharacter: 'Dinamis, strategis, dekat sentra fotokopi, perpustakaan, & kuliner ramah kantong mahasiswa',
     curfewAndSecurity: 'Akses gerbang terkontrol, tertib ronda malam komunal sesama warga',
     roomCapacity: '1 orang per kamar tidur (Kamar Mandiri)',
+    coordinatorName: 'Muh. Fatur Idris',
     coordinatorTitle: 'Koordinator Warga Aspura',
     coordinatorPhone: '+62 852-4038-9682',
     whatsappNumber: '6285240389682',
@@ -84,6 +86,7 @@ export const DORMITORY_UNITS: DormitoryUnit[] = [
     environmentCharacter: 'Asri, damai, pekarangan hijau dengan naungan pohon rindang, suasana kekeluargaan hangat',
     curfewAndSecurity: 'Gerbang utama terkunci pukul 22.00 WITA, tertib tamu & buku mutasi kunjung',
     roomCapacity: 'Maksimal 2 orang per kamar tidur',
+    coordinatorName: 'Nurul Mawaddah',
     coordinatorTitle: 'Koordinator Warga Aspuri',
     coordinatorPhone: '+62 853-9714-2677',
     whatsappNumber: '6285397142677',
