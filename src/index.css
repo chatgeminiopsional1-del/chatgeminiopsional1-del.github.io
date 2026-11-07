@@ -1,26 +1,26 @@
 @import "tailwindcss";
 
 @theme {
-  --color-paper: #f7f4ed;
-  --color-paper-subtle: #f2eee3;
-  --color-paper-muted: #ebe6d8;
-  --color-paper-dark: #ded8c7;
-  --color-ink: #1c221e;
-  --color-ink-muted: #435148;
-  --color-ink-subtle: #627268;
-  --color-forest: #143a2d;
-  --color-forest-deep: #0c261e;
-  --color-forest-light: #1b4d3e;
-  --color-clay: #8f5727;
-  --color-line: #d8d2c4;
+  --color-paper: #fafafa;
+  --color-paper-subtle: #f4f4f6;
+  --color-paper-muted: #e5e7eb;
+  --color-paper-dark: #d1d5db;
+  --color-ink: #0f172a;
+  --color-ink-muted: #475569;
+  --color-ink-subtle: #64748b;
+  --color-forest: #0f4c3a;
+  --color-forest-deep: #082f24;
+  --color-forest-light: #16654f;
+  --color-clay: #9a5b28;
+  --color-line: #e2e8f0;
 
-  --font-serif: "Fraunces", Georgia, serif;
+  --font-serif: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
   --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 body {
-  background-color: #f7f4ed;
-  color: #1c221e;
+  background-color: #fafafa;
+  color: #0f172a;
   font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -29,7 +29,7 @@ body {
 }
 
 .rule-dotted {
-  background-image: linear-gradient(to right, #d8d2c4 40%, rgba(255,255,255,0) 0%);
+  background-image: linear-gradient(to right, #e2e8f0 40%, rgba(255,255,255,0) 0%);
   background-position: bottom;
   background-size: 6px 1px;
   background-repeat: repeat-x;
@@ -48,7 +48,7 @@ body {
    ══════════════════════════════════════════════════ */
 
 *:focus-visible {
-  outline: 2px solid var(--color-forest, #143a2d);
+  outline: 2px solid var(--color-forest, #0f4c3a);
   outline-offset: 2px;
 }
 
@@ -126,30 +126,25 @@ body {
    MOBILE-NATIVE POLISH (mobile-native skill)
    ══════════════════════════════════════════════════ */
 
-/* Eliminate tap highlight flash across all mobile webkit/blink browsers */
 * {
   -webkit-tap-highlight-color: transparent;
 }
 
-/* Eliminate 300ms click delay on mobile touch interactions */
 button, a, [role="button"], input, select, textarea {
   touch-action: manipulation;
 }
 
-/* Prevent accidental text selection on buttons & interactive links */
 button, [role="button"], nav a {
   user-select: none;
   -webkit-user-select: none;
 }
 
-/* Prevent iOS Safari aggressive auto-zoom on input focus (minimum 16px font size on touch) */
 @media (pointer: coarse) {
   input, textarea, select {
     font-size: 16px !important;
   }
 }
 
-/* Utility to hide scrollbars for horizontal pill scrolling on mobile */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }

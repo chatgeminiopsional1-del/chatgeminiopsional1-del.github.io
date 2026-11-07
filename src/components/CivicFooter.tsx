@@ -3,7 +3,7 @@ import { OFFICIAL_LOGOS } from '../data/dormitoryData.ts';
 
 export const CivicFooter: React.FC = () => {
   return (
-    <footer className="w-full border-t border-line bg-[#f2eee3] text-ink-muted text-xs pt-14 pb-12">
+    <footer className="w-full border-t border-line bg-paper-subtle text-ink-muted text-xs pt-14 pb-12">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 pb-10 border-b border-line">
           {/* Col 1: Identity & Motto */}

@@ -29,7 +29,7 @@ export const CivicHeader: React.FC<CivicHeaderProps> = ({ onOpenRegistration }) 
 
   return (
     <header
-      className={`w-full sticky top-0 z-40 bg-[#f7f4ed]/95 backdrop-blur-md border-b border-line transition-all duration-200 ${
+      className={`w-full sticky top-0 z-40 bg-white/85 backdrop-blur-md border-b border-line transition-all duration-200 ${
         scrolled ? 'shadow-xs py-2' : 'py-2.5 sm:py-3'
       }`}
     >

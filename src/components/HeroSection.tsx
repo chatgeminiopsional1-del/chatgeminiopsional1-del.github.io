@@ -83,22 +83,22 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSelectPhoto, onOpenR
 
           {/* 4 Modern Pillar Cards */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3.5 mt-8 sm:mt-10 pt-6 sm:pt-8 border-t border-line">
-            <div className="p-4 rounded-xl bg-white border border-line/80 hover:border-forest/40 hover:-translate-y-0.5 transition-all shadow-2xs">
+            <div className="p-4 rounded-2xl bg-white border border-line/80 hover:border-forest/40 hover:-translate-y-0.5 transition-all shadow-2xs">
               <span className="text-[10px] font-bold uppercase tracking-wider text-forest block">2 Wisma Resmi</span>
               <span className="text-sm font-bold text-ink mt-1 block">Aspura &amp; Aspuri</span>
               <span className="text-[11px] text-ink-subtle mt-0.5 block leading-tight">Panakkukang &amp; Minasa Upa</span>
             </div>
-            <div className="p-4 rounded-xl bg-white border border-line/80 hover:border-forest/40 hover:-translate-y-0.5 transition-all shadow-2xs">
+            <div className="p-4 rounded-2xl bg-white border border-line/80 hover:border-forest/40 hover:-translate-y-0.5 transition-all shadow-2xs">
               <span className="text-[10px] font-bold uppercase tracking-wider text-forest block">Bebas Sewa</span>
               <span className="text-sm font-bold text-ink mt-1 block">Sampai Lulus</span>
               <span className="text-[11px] text-ink-subtle mt-0.5 block leading-tight">1x Biaya Fasilitas Awal</span>
             </div>
-            <div className="p-4 rounded-xl bg-white border border-line/80 hover:border-forest/40 hover:-translate-y-0.5 transition-all shadow-2xs">
+            <div className="p-4 rounded-2xl bg-white border border-line/80 hover:border-forest/40 hover:-translate-y-0.5 transition-all shadow-2xs">
               <span className="text-[10px] font-bold uppercase tracking-wider text-forest block">Kapasitas Kamar</span>
               <span className="text-sm font-bold text-ink mt-1 block">Nyaman &amp; Tertib</span>
               <span className="text-[11px] text-ink-subtle mt-0.5 block leading-tight">Aspura 1, Aspuri maks 2</span>
             </div>
-            <div className="p-4 rounded-xl bg-white border border-line/80 hover:border-forest/40 hover:-translate-y-0.5 transition-all shadow-2xs">
+            <div className="p-4 rounded-2xl bg-white border border-line/80 hover:border-forest/40 hover:-translate-y-0.5 transition-all shadow-2xs">
               <span className="text-[10px] font-bold uppercase tracking-wider text-forest block">Falsafah Luhur</span>
               <span className="text-sm font-bold text-forest mt-1 block font-serif italic">Siri' na Pacce</span>
               <span className="text-[11px] text-ink-subtle mt-0.5 block leading-tight">Solidaritas Butta Turatea</span>
@@ -186,9 +186,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSelectPhoto, onOpenR
           <div className={`lg:col-span-7 reveal delay-100 ${galleryVisible ? 'visible' : ''}`}>
             <figure
               onClick={() => onSelectPhoto(gatePhoto)}
-              className="h-full border border-line bg-white p-2.5 rounded-xl group cursor-pointer hover:border-forest/50 hover:shadow-md transition-all duration-200"
+              className="h-full border border-line/80 bg-white p-3 rounded-2xl group cursor-pointer hover:border-forest/50 hover:shadow-md transition-all duration-200"
             >
-              <div className="aspect-[16/10] overflow-hidden rounded-lg bg-paper-muted relative">
+              <div className="aspect-[16/10] overflow-hidden rounded-xl bg-paper-muted relative">
                 <img
                   alt="Gerbang resmi Aspuri HPMT Kabupaten Jeneponto di Makassar"
                   className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300"
@@ -216,9 +216,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSelectPhoto, onOpenR
             {/* Gazebo */}
             <figure
               onClick={() => onSelectPhoto(gazeboPhoto)}
-              className="border border-line bg-white p-2.5 rounded-xl group cursor-pointer hover:border-forest/50 hover:shadow-md transition-all duration-200"
+              className="border border-line/80 bg-white p-3 rounded-2xl group cursor-pointer hover:border-forest/50 hover:shadow-md transition-all duration-200"
             >
-              <div className="aspect-[16/9] overflow-hidden rounded-lg bg-paper-muted relative">
+              <div className="aspect-[16/9] overflow-hidden rounded-xl bg-paper-muted relative">
                 <img
                   alt="Suasana santai diskusi malam mahasiswi di gazebo pendopo asrama"
                   className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300"
@@ -237,39 +237,51 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSelectPhoto, onOpenR
               </figcaption>
             </figure>
 
-            {/* Split row: Yard & Side */}
-            <div className="grid grid-cols-2 gap-4">
+            {/* Bottom 2 Split Photos: Yard & Side */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {/* Yard */}
               <figure
                 onClick={() => onSelectPhoto(yardPhoto)}
-                className="border border-line bg-white p-2 rounded-xl group cursor-pointer hover:border-forest/50 hover:shadow-md transition-all duration-200"
+                className="border border-line/80 bg-white p-2.5 rounded-2xl group cursor-pointer hover:border-forest/50 hover:shadow-md transition-all duration-200"
               >
-                <div className="aspect-[4/3] overflow-hidden rounded-lg bg-paper-muted relative">
+                <div className="aspect-[4/3] overflow-hidden rounded-xl bg-paper-muted relative">
                   <img
-                    alt="Pekarangan dan fasad bangunan asrama"
-                    className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-300"
+                    alt="Pekarangan asrama yang rindang dengan pohon buah"
+                    className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300"
                     src={yardPhoto.url}
                     loading="lazy"
                   />
+                  <div className="absolute top-2 right-2 bg-white/90 text-ink text-[11px] px-2 py-0.5 rounded border border-line opacity-0 group-hover:opacity-100 transition-opacity">
+                    Perbesar ↗
+                  </div>
                 </div>
-                <figcaption className="pt-2 px-0.5 text-[11px] text-ink-subtle leading-tight group-hover:text-ink transition-colors font-medium">
-                  {yardPhoto.title}
+                <figcaption className="pt-2 px-1 text-xs text-ink-muted">
+                  <span className="font-semibold text-ink block truncate group-hover:text-forest transition-colors">
+                    {yardPhoto.title}
+                  </span>
                 </figcaption>
               </figure>
 
+              {/* Side */}
               <figure
                 onClick={() => onSelectPhoto(sidePhoto)}
-                className="border border-line bg-white p-2 rounded-xl group cursor-pointer hover:border-forest/50 hover:shadow-md transition-all duration-200"
+                className="border border-line/80 bg-white p-2.5 rounded-2xl group cursor-pointer hover:border-forest/50 hover:shadow-md transition-all duration-200"
               >
-                <div className="aspect-[4/3] overflow-hidden rounded-lg bg-paper-muted relative">
+                <div className="aspect-[4/3] overflow-hidden rounded-xl bg-paper-muted relative">
                   <img
-                    alt="Lorong teras samping dan parkir kendaraan"
-                    className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-300"
+                    alt="Teras samping asrama untuk sirkulasi dan parkir motor aman"
+                    className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300"
                     src={sidePhoto.url}
                     loading="lazy"
                   />
+                  <div className="absolute top-2 right-2 bg-white/90 text-ink text-[11px] px-2 py-0.5 rounded border border-line opacity-0 group-hover:opacity-100 transition-opacity">
+                    Perbesar ↗
+                  </div>
                 </div>
-                <figcaption className="pt-2 px-0.5 text-[11px] text-ink-subtle leading-tight group-hover:text-ink transition-colors font-medium">
-                  {sidePhoto.title}
+                <figcaption className="pt-2 px-1 text-xs text-ink-muted">
+                  <span className="font-semibold text-ink block truncate group-hover:text-forest transition-colors">
+                    {sidePhoto.title}
+                  </span>
                 </figcaption>
               </figure>
             </div>

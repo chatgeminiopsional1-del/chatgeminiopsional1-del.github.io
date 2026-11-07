@@ -42,14 +42,14 @@ export const WismaDirectory: React.FC<WismaDirectoryProps> = ({ onSelectUnitForR
       </div>
 
       {/* Modern Segmented Controller / Filter Tabs */}
-      <div className="flex items-center gap-2 mb-8 overflow-x-auto no-scrollbar py-1">
+      <div className="inline-flex items-center p-1.5 rounded-2xl bg-paper-subtle border border-line/70 gap-1.5 mb-8 max-w-full overflow-x-auto no-scrollbar">
         <button
           type="button"
           onClick={() => setFilterUnit('all')}
-          className={`min-h-[42px] px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all duration-150 cursor-pointer whitespace-nowrap shrink-0 ${
+          className={`min-h-[38px] px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all duration-150 cursor-pointer whitespace-nowrap shrink-0 ${
             filterUnit === 'all'
               ? 'bg-forest text-paper shadow-xs'
-              : 'bg-white border border-line/80 text-ink hover:bg-paper-subtle active:scale-[0.98]'
+              : 'text-ink-muted hover:text-ink hover:bg-white/60 active:scale-[0.98]'
           }`}
         >
           Semua Unit ({DORMITORY_UNITS.length})
@@ -57,10 +57,10 @@ export const WismaDirectory: React.FC<WismaDirectoryProps> = ({ onSelectUnitForR
         <button
           type="button"
           onClick={() => setFilterUnit('aspura')}
-          className={`min-h-[42px] px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all duration-150 cursor-pointer whitespace-nowrap shrink-0 ${
+          className={`min-h-[38px] px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all duration-150 cursor-pointer whitespace-nowrap shrink-0 ${
             filterUnit === 'aspura'
               ? 'bg-forest text-paper shadow-xs'
-              : 'bg-white border border-line/80 text-ink hover:bg-paper-subtle active:scale-[0.98]'
+              : 'text-ink-muted hover:text-ink hover:bg-white/60 active:scale-[0.98]'
           }`}
         >
           Wisma Putra (Panakkukang)
@@ -68,10 +68,10 @@ export const WismaDirectory: React.FC<WismaDirectoryProps> = ({ onSelectUnitForR
         <button
           type="button"
           onClick={() => setFilterUnit('aspuri')}
-          className={`min-h-[42px] px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all duration-150 cursor-pointer whitespace-nowrap shrink-0 ${
+          className={`min-h-[38px] px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all duration-150 cursor-pointer whitespace-nowrap shrink-0 ${
             filterUnit === 'aspuri'
               ? 'bg-forest text-paper shadow-xs'
-              : 'bg-white border border-line/80 text-ink hover:bg-paper-subtle active:scale-[0.98]'
+              : 'text-ink-muted hover:text-ink hover:bg-white/60 active:scale-[0.98]'
           }`}
         >
           Wisma Putri (Minasa Upa)
