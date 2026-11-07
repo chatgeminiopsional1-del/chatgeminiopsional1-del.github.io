@@ -8,24 +8,13 @@ export const FacilitiesLedger: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
-  // Interactive monthly calculator states
-  const [includeWifi, setIncludeWifi] = useState(true);
-  const [includeKas, setIncludeKas] = useState(true);
-
-  const calculatedMonthly = useMemo(() => {
-    let sum = 0;
-    if (includeWifi) sum += 40000;
-    if (includeKas) sum += 15000;
-    return sum;
-  }, [includeWifi, includeKas]);
-
   const filteredFacilities = useMemo(() => {
     return filterFacilities(FACILITIES_DATA, searchQuery, selectedCategory);
   }, [searchQuery, selectedCategory]);
 
   return (
     <section
-      className={`border-t border-line/80 bg-paper-subtle/60 py-14 sm:py-20 reveal ${
+      className={`border-t border-line/80 bg-paper-subtle/50 py-14 sm:py-20 reveal ${
         visible ? 'visible' : ''
       }`}
       id="kehidupan-fasilitas"
@@ -55,71 +44,6 @@ export const FacilitiesLedger: React.FC = () => {
                 <span>Ketentuan Semester: Terbuka maksimal untuk mahasiswa semester 3 (pendaftar di atas semester 3 wajib melalui musyawarah dan ketentuan khusus pengurus).</span>
               </div>
             </div>
-          </div>
-        </div>
-
-        {/* ── Modern Interactive Monthly Cost Calculator ── */}
-        <div className="mb-8 p-5 sm:p-6 bg-white border border-line/80 rounded-2xl shadow-xs">
-          <div className="flex flex-col md:flex-row md:items-center justify-between pb-4 border-b border-line gap-4">
-            <div>
-              <span className="text-[10px] font-bold uppercase tracking-wider text-forest block mb-0.5">
-                Kalkulator Transparansi
-              </span>
-              <h3 className="font-serif text-lg sm:text-xl font-bold text-ink">
-                Simulasi Estimasi Pengeluaran Rutin per Bulan
-              </h3>
-            </div>
-            <div className="flex items-baseline gap-2">
-              <span className="text-xs text-ink-muted">Estimasi Iuran Warga:</span>
-              <span className="font-serif text-xl sm:text-2xl font-bold text-forest">
-                Rp {calculatedMonthly.toLocaleString('id-ID')}
-              </span>
-              <span className="text-xs text-ink-subtle">/ bulan</span>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 mt-4 pt-1">
-            {/* Sewa Kamar Status */}
-            <div className="p-3.5 rounded-xl bg-paper border border-line/70">
-              <span className="text-[11px] font-bold text-ink-muted block uppercase">Sewa Kamar Bulanan</span>
-              <span className="text-base font-bold text-forest mt-0.5 block">Rp 0 (Bebas Biaya)</span>
-              <span className="text-[11px] text-ink-subtle mt-0.5 block">Termasuk dalam kontribusi masuk awal</span>
-            </div>
-
-            {/* Wi-Fi Toggle */}
-            <label className="p-3.5 rounded-xl bg-paper border border-line/70 flex items-center justify-between cursor-pointer hover:border-forest/40 transition-colors">
-              <div>
-                <span className="text-[11px] font-bold text-ink-muted block uppercase">Wi-Fi Broadband 24 Jam</span>
-                <span className="text-sm font-bold text-ink mt-0.5 block">Rp 40.000 / bln</span>
-                <span className="text-[11px] text-ink-subtle mt-0.5 block">Patungan kolektif warga</span>
-              </div>
-              <input
-                type="checkbox"
-                checked={includeWifi}
-                onChange={(e) => setIncludeWifi(e.target.checked)}
-                className="w-4 h-4 accent-forest rounded cursor-pointer"
-              />
-            </label>
-
-            {/* Kas Warga Toggle */}
-            <label className="p-3.5 rounded-xl bg-paper border border-line/70 flex items-center justify-between cursor-pointer hover:border-forest/40 transition-colors">
-              <div>
-                <span className="text-[11px] font-bold text-ink-muted block uppercase">Kas Kedaruratan &amp; Sosial</span>
-                <span className="text-sm font-bold text-ink mt-0.5 block">Rp 15.000 / bln</span>
-                <span className="text-[11px] text-ink-subtle mt-0.5 block">Alat kebersihan &amp; sosial kawan sakit</span>
-              </div>
-              <input
-                type="checkbox"
-                checked={includeKas}
-                onChange={(e) => setIncludeKas(e.target.checked)}
-                className="w-4 h-4 accent-forest rounded cursor-pointer"
-              />
-            </label>
-          </div>
-
-          <div className="mt-4 pt-3 border-t border-line/60 flex flex-col sm:flex-row items-start sm:items-center justify-between text-xs text-ink-subtle gap-2">
-            <span>* Air bersih sumur bor mandiri dan listrik kebutuhan studi pokok tidak dipungut biaya sewa terpisah.</span>
-            <span className="font-medium text-forest">Hemat lebih dari 90% dibanding indekos komersial di Makassar</span>
           </div>
         </div>
 
