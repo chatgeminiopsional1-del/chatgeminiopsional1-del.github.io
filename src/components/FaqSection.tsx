@@ -12,20 +12,20 @@ export const FaqSection: React.FC = () => {
 
   return (
     <section
-      className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16 py-16 sm:py-24 border-t border-line"
+      className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16 py-14 sm:py-20 border-t border-line/80"
       id="alur-pendaftaran"
       ref={ref as React.RefObject<HTMLElement>}
     >
-      <div className={`grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-10 reveal ${visible ? 'visible' : ''}`}>
+      <div className={`grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-8 sm:mb-10 reveal ${visible ? 'visible' : ''}`}>
         <div className="lg:col-span-5">
           <span className="text-xs font-bold uppercase tracking-[0.2em] text-forest block mb-1">
             Informasi Bagi Calon Warga &amp; Orang Tua
           </span>
-          <h2 className="font-serif text-2xl sm:text-4xl text-ink font-bold leading-tight">
+          <h2 className="font-serif text-2xl sm:text-4xl text-ink font-bold leading-tight tracking-tight">
             Tanya Jawab Seputar Kehidupan Asrama
           </h2>
         </div>
-        <div className="lg:col-span-7 text-sm sm:text-base text-ink/80 leading-relaxed">
+        <div className="lg:col-span-7 text-xs sm:text-sm text-ink-muted leading-relaxed">
           <p>
             Berikut beberapa pertanyaan mendasar yang kerap diajukan oleh calon mahasiswa baru, orang tua dari Jeneponto, maupun sesama perantau mengenai persyaratan tinggal, biaya fasilitas, dan kehidupan komunal di asrama.
           </p>
@@ -33,12 +33,12 @@ export const FaqSection: React.FC = () => {
       </div>
 
       <div
-        className={`divide-y divide-line border border-line bg-white rounded-xl p-4 sm:p-7 shadow-xs reveal delay-200 ${visible ? 'visible' : ''}`}
+        className={`divide-y divide-line/70 border border-line/80 bg-white rounded-2xl p-5 sm:p-8 shadow-xs reveal delay-200 ${visible ? 'visible' : ''}`}
       >
         {FAQ_ITEMS.map((item, index) => {
           const isOpen = openIndex === index;
           return (
-            <div key={index} className="py-4 sm:py-5">
+            <div key={index} className="py-4 sm:py-5 first:pt-1 last:pb-1">
               <button
                 type="button"
                 onClick={() => toggle(index)}
@@ -55,7 +55,7 @@ export const FaqSection: React.FC = () => {
                   isOpen ? 'max-h-96 opacity-100 mt-3' : 'max-h-0 opacity-0'
                 }`}
               >
-                <p className="text-sm sm:text-[15px] text-ink/80 leading-relaxed pr-2 sm:pr-8">
+                <p className="text-xs sm:text-sm text-ink/80 leading-relaxed pr-2 sm:pr-8">
                   {item.answer}
                 </p>
               </div>
