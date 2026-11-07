@@ -112,7 +112,7 @@ export const RegistrationFlowModal: React.FC<RegistrationFlowModalProps> = ({
               BK Asrama HPMT • Panduan Warga Baru
             </span>
             <h2 id="modal-title" className="font-serif text-xl sm:text-2xl text-ink font-bold">
-              Formulir Sowan &amp; Minat Masuk Asrama
+              Formulir Pendaftaran &amp; Minat Masuk Asrama
             </h2>
           </div>
           <button
@@ -136,7 +136,7 @@ export const RegistrationFlowModal: React.FC<RegistrationFlowModalProps> = ({
               Identitas asal Jeneponto &amp; kampus.
             </div>
             <div className="p-2.5 border border-line rounded-lg bg-paper">
-              <strong className="text-forest block font-bold">2. Sowan Wisma</strong>
+              <strong className="text-forest block font-bold">2. Silaturahmi Wisma</strong>
               Datang bertamu &amp; silaturahmi langsung.
             </div>
             <div className="p-2.5 border border-line rounded-lg bg-paper">
@@ -452,7 +452,7 @@ export const RegistrationFlowModal: React.FC<RegistrationFlowModalProps> = ({
             </div>
 
             <p className="text-xs text-ink-subtle pt-2">
-              Pengurus asrama akan membalas pesan Anda mengenai jadwal penerimaan sowan langsung di wisma {targetUnit.locationArea}.
+              Pengurus asrama akan membalas pesan Anda mengenai jadwal penerimaan dan silaturahmi langsung di wisma {targetUnit.locationArea}.
             </p>
           </div>
         )}

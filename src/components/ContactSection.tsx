@@ -16,7 +16,7 @@ export const ContactSection: React.FC = () => {
               </span>
             </div>
             <h2 className="font-serif text-2xl sm:text-4xl text-ink font-bold mb-3 leading-tight tracking-tight">
-              Kontak Koordinator, Sowan, &amp; Silaturahmi
+              Kontak Koordinator &amp; Silaturahmi
             </h2>
             <p className="text-xs sm:text-sm text-ink-muted leading-relaxed max-w-xl mb-6">
               Apakah Anda calon mahasiswa asal Butta Turatea yang baru tiba di Makassar? Atau orang tua dan alumni yang ingin bertandang silaturahmi ke wisma? Koordinator dan pengurus asrama senantiasa menerima kedatangan Anda dengan tangan terbuka.

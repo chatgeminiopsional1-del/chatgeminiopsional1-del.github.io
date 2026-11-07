@@ -15,8 +15,8 @@ export const WismaDirectory: React.FC<WismaDirectoryProps> = ({ onSelectUnitForR
   const aspura = DORMITORY_UNITS.find((u) => u.id === 'aspura')!;
   const aspuri = DORMITORY_UNITS.find((u) => u.id === 'aspuri')!;
 
-  const aspuraWaText = "Tabe' Pengurus Aspura HPMT Jeneponto, saya ingin bertanya mengenai ketersediaan kamar dan jadwal sowan silaturahmi ke asrama putra.";
-  const aspuriWaText = "Tabe' Pengurus Aspuri HPMT Jeneponto, saya ingin bertanya mengenai ketersediaan kamar dan jadwal sowan silaturahmi ke asrama putri.";
+  const aspuraWaText = "Tabe' Pengurus Aspura HPMT Jeneponto, saya ingin bertanya mengenai ketersediaan kamar dan jadwal silaturahmi ke asrama putra.";
+  const aspuriWaText = "Tabe' Pengurus Aspuri HPMT Jeneponto, saya ingin bertanya mengenai ketersediaan kamar dan jadwal silaturahmi ke asrama putri.";
 
   return (
     <section

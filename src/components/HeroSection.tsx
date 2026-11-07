@@ -59,7 +59,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSelectPhoto, onOpenR
               onClick={onOpenRegistration}
               className="group inline-flex items-center justify-center gap-2.5 min-h-[48px] px-6 py-3.5 bg-forest text-paper text-sm font-bold rounded-xl hover:bg-forest-deep active:scale-[0.98] transition-all duration-150 shadow-md hover:shadow-lg cursor-pointer w-full sm:w-auto"
             >
-              <span>Ajukan Sowan / Pendaftaran</span>
+              <span>Daftar Warga Baru</span>
               <span aria-hidden="true" className="text-base group-hover:translate-x-1 transition-transform">→</span>
             </button>
             <a
@@ -147,7 +147,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSelectPhoto, onOpenR
             <div className="mt-5 pt-3 border-t border-line/70 flex items-center justify-between">
               <span className="text-[11px] text-emerald-700 font-semibold flex items-center gap-1.5">
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                Registrasi &amp; Sowan Terbuka
+                Penerimaan Warga Terbuka
               </span>
               <button
                 type="button"

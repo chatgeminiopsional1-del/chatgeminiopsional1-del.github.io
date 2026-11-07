@@ -138,7 +138,7 @@ export const CivicHeader: React.FC<CivicHeaderProps> = ({ onOpenRegistration }) 
                 }}
                 className="w-full py-2.5 px-4 bg-forest text-paper text-xs font-bold rounded-lg hover:bg-forest-deep active:scale-[0.98] transition-all text-center flex items-center justify-center gap-1.5 shadow-xs"
               >
-                <span>Ajukan Sowan / Pendaftaran Warga Baru</span>
+                <span>Pendaftaran Warga Baru Asrama</span>
                 <span aria-hidden="true">→</span>
               </button>
             </div>

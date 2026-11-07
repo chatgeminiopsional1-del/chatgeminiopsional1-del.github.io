@@ -276,7 +276,7 @@ export const FAQ_ITEMS = [
   {
     question: 'Sampai semester berapa batas pendaftaran warga asrama baru?',
     answer:
-      'Pendaftaran terbuka maksimal untuk mahasiswa semester 3. Bagi mahasiswa yang berada di atas semester 3, berlaku ketentuan dan pertimbangan khusus dari pengurus asrama saat sowan (seperti komitmen keaktifan organisasi HPMT, rekomendasi, dan musyawarah koordinator wisma).'
+      'Pendaftaran terbuka maksimal untuk mahasiswa semester 3. Bagi mahasiswa yang berada di atas semester 3, berlaku ketentuan dan pertimbangan khusus dari pengurus asrama saat silaturahmi ke wisma (seperti komitmen keaktifan organisasi HPMT, rekomendasi, dan musyawarah koordinator wisma).'
   },
   {
     question: 'Bagaimana aturan jam malam bagi penghuni Aspura dan Aspuri?',

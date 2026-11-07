@@ -97,12 +97,12 @@ export const MobileBottomNav: React.FC<MobileBottomNavProps> = ({ onOpenRegistra
           );
         })}
 
-        {/* Sowan / Daftar — elevated center CTA */}
+        {/* Daftar Asrama — elevated center CTA */}
         <button
           type="button"
           onClick={onOpenRegistration}
           className="flex flex-col items-center justify-center min-w-[64px] min-h-[44px] px-3 py-1.5 bg-forest text-paper rounded-md hover:bg-forest-deep active:bg-forest-deep transition-all shadow-md cursor-pointer"
-          aria-label="Sowan atau Daftar menjadi warga asrama"
+          aria-label="Daftar menjadi warga asrama"
         >
           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}

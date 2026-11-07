@@ -83,7 +83,7 @@ export default function App() {
         {/* Grounded Civic Footer */}
         <CivicFooter />
 
-        {/* Registration & Sowan Inquiry Modal */}
+        {/* Registration Flow Modal */}
         <RegistrationFlowModal
           isOpen={isRegistrationOpen}
           onClose={() => setIsRegistrationOpen(false)}

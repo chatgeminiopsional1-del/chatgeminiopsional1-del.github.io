@@ -43,7 +43,7 @@ export function formatRegistrationMessage(data: RegistrationFormData): string {
   
   return (
     `Tabe' Kakanda Pengurus ${targetUnit} Asrama HPMT Jeneponto di Makassar,\n\n` +
-    `Saya calon warga asrama bermaksud mengajukan permohonan hunian/sowan silaturahmi:\n\n` +
+    `Saya calon warga asrama bermaksud mengajukan permohonan hunian & silaturahmi:\n\n` +
     `• Nama Lengkap: ${data.fullName}\n` +
     `• Asal Daerah: Kec. ${data.subdistrict}${data.villageName ? `, Desa/Kel. ${data.villageName}` : ''}, Jeneponto\n` +
     `• Kampus di Makassar: ${data.campusName}\n` +
@@ -54,7 +54,7 @@ export function formatRegistrationMessage(data: RegistrationFormData): string {
     `• Pilihan Unit: ${targetUnit}\n` +
     `• Ketentuan Masuk: Bersedia membayar kontribusi fasilitas Rp1.500.000 (sekali bayar sampai lulus kuliah / bebas biaya sewa)\n` +
     (data.notes ? `• Catatan Khusus / Pertanyaan: ${data.notes}\n` : '') +
-    `\nMohon petunjuk ketersediaan kamar, jadwal sowan ke asrama, dan berkas yang perlu disiapkan. Tabe', terima kasih banyak.`
+    `\nMohon petunjuk ketersediaan kamar, jadwal silaturahmi ke asrama, dan berkas yang perlu disiapkan. Tabe', terima kasih banyak.`
   );
 }
 
