@@ -1,9 +1,10 @@
 import React, { useState, useCallback } from 'react';
 import { CivicHeader } from './components/CivicHeader.tsx';
 import { HeroSection } from './components/HeroSection.tsx';
-import { ManifestoSection } from './components/ManifestoSection.tsx';
+import { CommunityBento } from './components/CommunityBento.tsx';
 import { WismaDirectory } from './components/WismaDirectory.tsx';
 import { FacilitiesLedger } from './components/FacilitiesLedger.tsx';
+import { ManifestoSection } from './components/ManifestoSection.tsx';
 import { FaqSection } from './components/FaqSection.tsx';
 import { ContactSection } from './components/ContactSection.tsx';
 import { CivicFooter } from './components/CivicFooter.tsx';
@@ -60,14 +61,17 @@ export default function App() {
             onOpenRegistration={() => handleOpenRegistration('aspura')}
           />
 
-          {/* Manifesto & Siri' na Pacce Cultural Section */}
-          <ManifestoSection />
+          {/* Dynamic Community Bento Grid (Kehidupan Asrama, LK-1, Muswa, Silaturahmi) */}
+          <CommunityBento />
 
-          {/* Wisma Directory (Aspura & Aspuri Ledgers) */}
+          {/* Wisma Directory (Aspura & Aspuri Ledgers with Modern Tab Switcher) */}
           <WismaDirectory onSelectUnitForRegistration={handleOpenRegistration} />
 
           {/* Facilities & Communal Living Ledger Table + Monthly Dues Estimator */}
           <FacilitiesLedger />
+
+          {/* Manifesto & Siri' na Pacce Cultural Section */}
+          <ManifestoSection />
 
           {/* Frequently Asked Questions */}
           <FaqSection />

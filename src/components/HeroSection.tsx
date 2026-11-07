@@ -23,121 +23,139 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSelectPhoto, onOpenR
 
   return (
     <section className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16 pt-6 sm:pt-10 pb-16 sm:pb-24">
-      {/* ── Disambiguation & Civic Kicker ── */}
-      <div className={`reveal ${heroVisible ? 'visible' : ''} mb-4`}>
-        <div className="inline-flex flex-wrap items-center gap-2 px-3 py-1.5 rounded-md bg-forest/8 border border-forest/15 text-xs text-forest">
+      {/* ── Modern Status Badge & Civic Kicker ── */}
+      <div className={`reveal ${heroVisible ? 'visible' : ''} mb-4 sm:mb-6`}>
+        <div className="inline-flex flex-wrap items-center gap-2 px-3.5 py-1.5 rounded-full bg-forest/8 border border-forest/20 text-xs text-forest shadow-2xs">
           <span className="flex h-2 w-2 relative shrink-0">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-forest opacity-75" />
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-forest" />
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75" />
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-600" />
           </span>
           <span className="font-bold tracking-wide uppercase text-[11px]">
-            BK Asrama PB HPMT Jeneponto di Makassar
+            Penerimaan Warga Baru 2026/2027 Dibuka
           </span>
-          <span className="text-forest/40 hidden sm:inline" aria-hidden="true">•</span>
-          <span className="text-forest/85 text-[11px]">
-            Himpunan Pelajar Mahasiswa Turatea (Sulawesi Selatan)
+          <span className="text-forest/30 hidden sm:inline" aria-hidden="true">•</span>
+          <span className="text-forest/80 text-[11px] font-medium hidden sm:inline">
+            BK Asrama PB HPMT Jeneponto di Makassar
           </span>
         </div>
       </div>
 
-      {/* ── Headline & Highlight Area ── */}
+      {/* ── Modern Headline & Hero Grid ── */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 pb-12 border-b border-line items-start">
-        {/* Left Column: Title & CTA */}
+        {/* Left Column: Title & Modern Action Group */}
         <div className={`lg:col-span-7 xl:col-span-8 reveal delay-100 ${heroVisible ? 'visible' : ''}`}>
-          <h1 className="font-serif text-[28px] sm:text-5xl lg:text-[54px] xl:text-[62px] leading-[1.12] sm:leading-[1.08] tracking-tight font-bold text-ink">
+          <h1 className="font-serif text-[30px] sm:text-5xl lg:text-[56px] xl:text-[62px] leading-[1.12] sm:leading-[1.08] tracking-tight font-bold text-ink">
             Rumah Bersama Mahasiswa Turatea di Perantauan Makassar.
           </h1>
 
-          <p className="mt-4 sm:mt-5 text-sm sm:text-lg text-ink/80 max-w-2xl leading-relaxed">
-            Wadah berteduh, berhimpun, dan saling memikul nasib di tanah rantau. Bebas biaya sewa kamar bulanan sampai lulus kuliah, dikelola mandiri secara swadaya berlandaskan falsafah luhur <em className="font-serif italic font-semibold text-forest">Siri' na Pacce ri Butta Turatea</em>.
+          <p className="mt-4 sm:mt-5 text-sm sm:text-lg text-ink/80 max-w-2xl leading-relaxed font-normal">
+            Wadah berteduh, berhimpun, dan saling memikul nasib di tanah rantau. Bebas biaya sewa kamar bulanan sampai lulus kuliah, dikelola mandiri secara gotong royong berlandaskan falsafah luhur <em className="font-serif italic font-semibold text-forest">Siri' na Pacce ri Butta Turatea</em>.
           </p>
 
-          {/* Action Buttons */}
-          <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3">
+          {/* Modern Action Buttons */}
+          <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
             <button
               type="button"
               onClick={onOpenRegistration}
-              className="inline-flex items-center justify-center gap-2 min-h-[46px] sm:min-h-[48px] px-5 sm:px-6 py-3 bg-forest text-paper text-sm font-semibold rounded-lg hover:bg-forest-deep active:scale-[0.98] transition-all duration-150 shadow-md hover:shadow-lg cursor-pointer w-full sm:w-auto"
+              className="group inline-flex items-center justify-center gap-2.5 min-h-[48px] px-6 py-3.5 bg-forest text-paper text-sm font-bold rounded-xl hover:bg-forest-deep active:scale-[0.98] transition-all duration-150 shadow-md hover:shadow-lg cursor-pointer w-full sm:w-auto"
             >
               <span>Ajukan Sowan / Pendaftaran</span>
-              <span aria-hidden="true" className="text-base font-bold">→</span>
+              <span aria-hidden="true" className="text-base group-hover:translate-x-1 transition-transform">→</span>
             </button>
             <a
               href="#dua-wisma"
-              className="inline-flex items-center justify-center gap-2 min-h-[46px] sm:min-h-[48px] px-4 sm:px-5 py-3 border border-line bg-white text-ink text-sm font-medium rounded-lg hover:border-forest hover:text-forest active:scale-[0.98] transition-all duration-150 shadow-2xs w-full sm:w-auto"
+              className="inline-flex items-center justify-center gap-2 min-h-[48px] px-5 py-3.5 border border-line bg-white/90 text-ink text-sm font-semibold rounded-xl hover:border-forest/50 hover:bg-white active:scale-[0.98] transition-all duration-150 shadow-2xs w-full sm:w-auto"
             >
-              <span>Lihat Wisma Aspura &amp; Aspuri</span>
-              <span aria-hidden="true">↓</span>
+              <span>Lihat Wisma Putra &amp; Putri</span>
+              <span aria-hidden="true" className="text-xs">↓</span>
             </a>
             <a
               href="https://wa.me/6285240389682?text=Tabe'%20Pengurus%20Asrama%20HPMT,%20saya%20ingin%20bertanya%20mengenai%20info%20penerimaan%20asrama."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-1.5 py-2 text-xs font-semibold text-forest hover:underline"
+              className="inline-flex items-center justify-center gap-1.5 py-2 px-3 text-xs font-semibold text-forest hover:bg-forest/5 rounded-lg transition-colors"
             >
-              <span>Tanya Langsung via WhatsApp</span>
+              <span className="w-2 h-2 rounded-full bg-emerald-500 shrink-0" />
+              <span>Tanya Pengurus via WhatsApp</span>
               <span aria-hidden="true">↗</span>
             </a>
           </div>
 
-          {/* 4 Architectural Pillar Cards */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 mt-7 sm:mt-9 pt-6 sm:pt-7 border-t border-line">
-            <div className="p-3.5 rounded-lg bg-white border border-line/80 hover:border-forest/40 transition-colors">
+          {/* 4 Modern Pillar Cards */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3.5 mt-8 sm:mt-10 pt-6 sm:pt-8 border-t border-line">
+            <div className="p-4 rounded-xl bg-white border border-line/80 hover:border-forest/40 hover:-translate-y-0.5 transition-all shadow-2xs">
               <span className="text-[10px] font-bold uppercase tracking-wider text-forest block">2 Wisma Resmi</span>
-              <span className="text-sm font-bold text-ink mt-0.5 block">Aspura &amp; Aspuri</span>
-              <span className="text-[11px] text-ink-subtle mt-0.5 block">Panakkukang &amp; Minasa Upa</span>
+              <span className="text-sm font-bold text-ink mt-1 block">Aspura &amp; Aspuri</span>
+              <span className="text-[11px] text-ink-subtle mt-0.5 block leading-tight">Panakkukang &amp; Minasa Upa</span>
             </div>
-            <div className="p-3.5 rounded-lg bg-white border border-line/80 hover:border-forest/40 transition-colors">
+            <div className="p-4 rounded-xl bg-white border border-line/80 hover:border-forest/40 hover:-translate-y-0.5 transition-all shadow-2xs">
               <span className="text-[10px] font-bold uppercase tracking-wider text-forest block">Bebas Sewa</span>
-              <span className="text-sm font-bold text-ink mt-0.5 block">Sampai Lulus</span>
-              <span className="text-[11px] text-ink-subtle mt-0.5 block">1x Biaya Fasilitas Awal</span>
+              <span className="text-sm font-bold text-ink mt-1 block">Sampai Lulus</span>
+              <span className="text-[11px] text-ink-subtle mt-0.5 block leading-tight">1x Biaya Fasilitas Awal</span>
             </div>
-            <div className="p-3.5 rounded-lg bg-white border border-line/80 hover:border-forest/40 transition-colors">
+            <div className="p-4 rounded-xl bg-white border border-line/80 hover:border-forest/40 hover:-translate-y-0.5 transition-all shadow-2xs">
               <span className="text-[10px] font-bold uppercase tracking-wider text-forest block">Kapasitas Kamar</span>
-              <span className="text-sm font-bold text-ink mt-0.5 block">Nyaman &amp; Tertib</span>
-              <span className="text-[11px] text-ink-subtle mt-0.5 block">Aspura 1, Aspuri maks 2</span>
+              <span className="text-sm font-bold text-ink mt-1 block">Nyaman &amp; Tertib</span>
+              <span className="text-[11px] text-ink-subtle mt-0.5 block leading-tight">Aspura 1, Aspuri maks 2</span>
             </div>
-            <div className="p-3.5 rounded-lg bg-white border border-line/80 hover:border-forest/40 transition-colors">
+            <div className="p-4 rounded-xl bg-white border border-line/80 hover:border-forest/40 hover:-translate-y-0.5 transition-all shadow-2xs">
               <span className="text-[10px] font-bold uppercase tracking-wider text-forest block">Falsafah Luhur</span>
-              <span className="text-sm font-bold text-forest mt-0.5 block font-serif italic">Siri' na Pacce</span>
-              <span className="text-[11px] text-ink-subtle mt-0.5 block">Solidaritas Rantau Turatea</span>
+              <span className="text-sm font-bold text-forest mt-1 block font-serif italic">Siri' na Pacce</span>
+              <span className="text-[11px] text-ink-subtle mt-0.5 block leading-tight">Solidaritas Butta Turatea</span>
             </div>
           </div>
         </div>
 
-        {/* Right Column: Editorial Archival Card */}
+        {/* Right Column: Modern Live Dossier Card */}
         <div className={`lg:col-span-5 xl:col-span-4 reveal delay-200 ${heroVisible ? 'visible' : ''}`}>
-          <div className="bg-white border border-line rounded-xl p-6 sm:p-7 shadow-xs relative">
-            <div className="flex items-center justify-between border-b border-line pb-3 mb-4">
+          <div className="bg-white border border-line rounded-2xl p-6 sm:p-7 shadow-sm relative overflow-hidden">
+            {/* Subtle top indicator */}
+            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-forest to-emerald-600" />
+
+            <div className="flex items-center justify-between border-b border-line pb-3.5 mb-4">
               <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-forest block">
                 Arsip &amp; Entitas Resmi
               </span>
-              <span className="text-[10px] px-2 py-0.5 bg-paper-subtle rounded text-ink-muted font-mono font-medium">
+              <span className="text-[11px] px-2.5 py-0.5 bg-forest/8 text-forest font-bold rounded-full border border-forest/15">
                 PB HPMT 1964
               </span>
             </div>
 
-            <p className="text-sm text-ink/85 leading-[1.7]">
+            <p className="text-xs sm:text-sm text-ink/85 leading-[1.75]">
               Bagi anak-anak yang menempuh jalan studi ratusan kilometer dari pesisir Binamu, perbukitan Rumbia, Kelara, Bangkala, Batang, hingga Tarowang — Asrama HPMT bukan sekadar petak kamar. Di sinilah tempat menyeduh kopi bersama saat larut malam, belajar kelompok di gazebo pekarangan, dan saling menjaga kehormatan di tanah perantauan Makassar.
             </p>
 
             <div className="mt-5 pt-4 border-t border-line space-y-2.5 text-xs">
-              <div className="flex items-center justify-between">
+              <div className="flex items-center justify-between py-1">
                 <span className="text-ink-muted">Unit 01 (Putra):</span>
                 <span className="font-semibold text-ink">Panakkukang, Makassar</span>
               </div>
-              <div className="flex items-center justify-between">
+              <div className="flex items-center justify-between py-1">
                 <span className="text-ink-muted">Unit 02 (Putri):</span>
                 <span className="font-semibold text-ink">Minasa Upa, Makassar</span>
               </div>
-              <div className="flex items-center justify-between">
+              <div className="flex items-center justify-between py-1">
                 <span className="text-ink-muted">Sistem Asrama:</span>
                 <span className="font-semibold text-forest">Swakelola Komunal Nirlaba</span>
               </div>
-              <div className="flex items-center justify-between">
+              <div className="flex items-center justify-between py-1">
                 <span className="text-ink-muted">Afiliasi Induk:</span>
                 <span className="font-semibold text-ink">PB HPMT Kab. Jeneponto</span>
               </div>
+            </div>
+
+            <div className="mt-5 pt-3 border-t border-line/70 flex items-center justify-between">
+              <span className="text-[11px] text-emerald-700 font-semibold flex items-center gap-1.5">
+                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                Registrasi &amp; Sowan Terbuka
+              </span>
+              <button
+                type="button"
+                onClick={onOpenRegistration}
+                className="text-xs font-bold text-forest hover:underline cursor-pointer"
+              >
+                Daftar Sekarang →
+              </button>
             </div>
           </div>
         </div>

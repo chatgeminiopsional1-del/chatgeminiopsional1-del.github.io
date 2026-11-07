@@ -19,11 +19,12 @@ export const CivicHeader: React.FC<CivicHeaderProps> = ({ onOpenRegistration }) 
   }, [mobileMenuOpen]);
 
   const navLinks = [
+    { label: 'Kehidupan Warga', href: '#kehidupan-asrama' },
     { label: 'Wisma Aspura & Aspuri', href: '#dua-wisma' },
     { label: 'Fasilitas & Iuran', href: '#kehidupan-fasilitas' },
     { label: 'Siri\' na Pacce', href: '#manifesto-filosofi' },
     { label: 'Tanya Jawab', href: '#alur-pendaftaran' },
-    { label: 'Kontak Pengurus', href: '#kontak-silaturahmi' },
+    { label: 'Kontak', href: '#kontak-silaturahmi' },
   ];
 
   return (
