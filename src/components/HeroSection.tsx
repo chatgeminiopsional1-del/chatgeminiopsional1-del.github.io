@@ -44,12 +44,12 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSelectPhoto, onOpenR
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 pb-12 border-b border-line items-start">
         {/* Left Column: Title & Modern Action Group */}
         <div className={`lg:col-span-7 xl:col-span-8 reveal delay-100 ${heroVisible ? 'visible' : ''}`}>
-          <h1 className="font-serif text-[30px] sm:text-5xl lg:text-[56px] xl:text-[62px] leading-[1.12] sm:leading-[1.08] tracking-tight font-bold text-ink">
-            Rumah Bersama Mahasiswa Turatea di Perantauan Makassar.
+          <h1 className="font-serif text-[30px] sm:text-5xl lg:text-[54px] xl:text-[60px] leading-[1.14] sm:leading-[1.1] tracking-tight font-bold text-ink">
+            Asrama Himpunan Pelajar Mahasiswa Turatea Kabupaten Jeneponto.
           </h1>
 
           <p className="mt-4 sm:mt-5 text-sm sm:text-lg text-ink/80 max-w-2xl leading-relaxed font-normal">
-            Wadah berteduh, berhimpun, dan saling memikul nasib di tanah rantau. Bebas biaya sewa kamar bulanan sampai lulus kuliah, dikelola mandiri secara gotong royong berlandaskan falsafah luhur <em className="font-serif italic font-semibold text-forest">Siri' na Pacce ri Butta Turatea</em>.
+            Wadah berteduh, berhimpun, dan saling memikul nasib di tanah rantau Makassar. Bebas biaya sewa kamar bulanan sampai lulus kuliah, dikelola mandiri secara gotong royong berlandaskan falsafah luhur <em className="font-serif italic font-semibold text-forest">Siri' na Pacce ri Butta Turatea</em>.
           </p>
 
           {/* Modern Action Buttons */}
