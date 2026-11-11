@@ -151,7 +151,7 @@ export const ContactSection: React.FC = () => {
                 Keterangan Keabsahan Organisasi
               </span>
               <p className="text-xs text-ink/80 leading-relaxed">
-                BK Asrama HPMT berada di bawah naungan <strong>Pengurus Besar Himpunan Pelajar Mahasiswa Turatea (PB HPMT Jeneponto)</strong> yang didirikan sejak 1964 sebagai wadah resmi kaum muda Butta Turatea di perantauan Makassar.
+                Badan Khusus Asrama HPMT merupakan wadah resmi di bawah <strong>Himpunan Pelajar Mahasiswa Turatea (HPMT Kab. Jeneponto)</strong> yang didirikan sejak 1964 untuk menaungi kaum muda Butta Turatea di perantauan Makassar.
               </p>
             </div>
           </div>

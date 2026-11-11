@@ -30,8 +30,8 @@ export const CivicFooter: React.FC = () => {
               “Siri' na Pacce ri Butta Turatea — Menjaga Martabat dan Solidaritas di Tanah Perantauan.”
             </p>
             <div className="p-3 bg-white/70 border border-line rounded-lg text-[11px] text-ink/75 leading-relaxed">
-              <strong className="text-forest font-semibold block mb-0.5">Pengurus Besar HPMT:</strong>
-              Website resmi Badan Khusus Asrama PB HPMT (Himpunan Pelajar Mahasiswa Turatea) Kabupaten Jeneponto, Sulawesi Selatan di Kota Makassar.
+              <strong className="text-forest font-semibold block mb-0.5">Badan Khusus Asrama HPMT:</strong>
+              Website resmi Badan Khusus Asrama HPMT (Himpunan Pelajar Mahasiswa Turatea) Kabupaten Jeneponto, Sulawesi Selatan di Kota Makassar.
             </div>
           </div>
 
@@ -129,10 +129,10 @@ export const CivicFooter: React.FC = () => {
         {/* Copyright Bottom Bar */}
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-ink-subtle gap-3">
           <p>
-            © {new Date().getFullYear()} BK Asrama PB HPMT Jeneponto di Makassar. Menjunjung Tinggi Siri' na Pacce.
+            © {new Date().getFullYear()} Badan Khusus Asrama HPMT Kab. Jeneponto di Makassar. Menjunjung Tinggi Siri' na Pacce.
           </p>
           <div className="flex items-center gap-3">
-            <span>PB HPMT Jeneponto</span>
+            <span>HPMT Kab. Jeneponto</span>
             <span className="text-line" aria-hidden="true">•</span>
             <span>Makassar, Sulawesi Selatan</span>
           </div>

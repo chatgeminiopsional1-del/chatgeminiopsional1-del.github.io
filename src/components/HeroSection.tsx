@@ -35,7 +35,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSelectPhoto, onOpenR
           </span>
           <span className="text-forest/30 hidden sm:inline" aria-hidden="true">•</span>
           <span className="text-forest/80 text-[11px] font-medium hidden sm:inline">
-            BK Asrama PB HPMT Jeneponto di Makassar
+            Badan Khusus Asrama HPMT Kab. Jeneponto di Makassar
           </span>
         </div>
       </div>
@@ -117,7 +117,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSelectPhoto, onOpenR
                 Arsip &amp; Entitas Resmi
               </span>
               <span className="text-[11px] px-2.5 py-0.5 bg-forest/8 text-forest font-bold rounded-full border border-forest/15">
-                PB HPMT 1964
+                HPMT 1964
               </span>
             </div>
 
@@ -139,8 +139,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSelectPhoto, onOpenR
                 <span className="font-semibold text-forest">Swakelola Komunal Nirlaba</span>
               </div>
               <div className="flex items-center justify-between py-1">
-                <span className="text-ink-muted">Afiliasi Induk:</span>
-                <span className="font-semibold text-ink">PB HPMT Kab. Jeneponto</span>
+                <span className="text-ink-muted">Induk Organisasi:</span>
+                <span className="font-semibold text-ink">HPMT Kab. Jeneponto</span>
               </div>
             </div>
 

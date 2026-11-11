@@ -52,7 +52,7 @@ export const CivicHeader: React.FC<CivicHeaderProps> = ({ onOpenRegistration }) 
             </div>
             <div className="min-w-0">
               <span className="text-[9px] sm:text-[10px] tracking-wider uppercase text-forest font-bold block leading-none truncate">
-                PB HPMT • Jeneponto
+                HPMT • Kab. Jeneponto
               </span>
               <span className="font-serif text-[16px] sm:text-xl font-bold text-ink group-hover:text-forest transition-colors block leading-tight mt-0.5 whitespace-nowrap">
                 BK Asrama HPMT
