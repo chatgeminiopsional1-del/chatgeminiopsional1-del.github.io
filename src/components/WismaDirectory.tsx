@@ -63,7 +63,7 @@ export const WismaDirectory: React.FC<WismaDirectoryProps> = ({ onSelectUnitForR
               : 'text-ink-muted hover:text-ink hover:bg-white/60 active:scale-[0.98]'
           }`}
         >
-          Asrama Putra (Panakkukang)
+          Asrama Putra (Mariso)
         </button>
         <button
           type="button"
@@ -324,7 +324,7 @@ export const WismaDirectory: React.FC<WismaDirectoryProps> = ({ onSelectUnitForR
               <h4 className="font-serif text-lg font-semibold text-ink">
                 {activeMapUnit === 'aspuri'
                   ? 'ASPURI HPMT Jeneponto — Jl. Minasa Upa No. 9 Blok B1, Rappocini'
-                  : 'ASPURA HPMT Jeneponto — Jl. Anggrek I No. 15, Panakkukang'}
+                  : 'ASPURA HPMT Jeneponto — Jl. Anggrek II No. 14, Bontorannu, Mariso'}
               </h4>
             </div>
             <div className="flex items-center gap-2">

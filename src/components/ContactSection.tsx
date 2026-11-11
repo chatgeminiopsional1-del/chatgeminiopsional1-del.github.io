@@ -31,7 +31,7 @@ export const ContactSection: React.FC = () => {
                     <span className="text-[10px] uppercase font-bold tracking-wider text-forest">
                       Unit 01 • ASPURA
                     </span>
-                    <span className="text-xs text-ink-subtle">Panakkukang</span>
+                    <span className="text-xs text-ink-subtle">Mariso</span>
                   </div>
                   <strong className="text-sm font-bold text-ink block">Muh. Fatur Idris</strong>
                   <span className="text-xs text-ink-subtle block">Koordinator Asrama Putra</span>

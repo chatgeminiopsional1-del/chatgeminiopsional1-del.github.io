@@ -24,7 +24,7 @@ export const GazetteTicker: React.FC = () => {
         {/* Right: Quick shortcuts */}
         <div className="hidden md:flex items-center gap-4 text-paper/80 shrink-0 text-[11px]">
           <span className="text-paper/40">•</span>
-          <span>Aspura (Panakkukang)</span>
+          <span>Aspura (Mariso)</span>
           <span className="text-paper/40">/</span>
           <span>Aspuri (Minasaupa)</span>
           <span className="text-paper/40">•</span>

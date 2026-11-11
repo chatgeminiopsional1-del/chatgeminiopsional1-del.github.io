@@ -86,7 +86,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSelectPhoto, onOpenR
             <div className="p-4 rounded-2xl bg-white border border-line/80 hover:border-forest/40 hover:-translate-y-0.5 transition-all shadow-2xs">
               <span className="text-[10px] font-bold uppercase tracking-wider text-forest block">2 Asrama Resmi</span>
               <span className="text-sm font-bold text-ink mt-1 block">Aspura &amp; Aspuri</span>
-              <span className="text-[11px] text-ink-subtle mt-0.5 block leading-tight">Panakkukang &amp; Minasa Upa</span>
+              <span className="text-[11px] text-ink-subtle mt-0.5 block leading-tight">Mariso &amp; Minasa Upa</span>
             </div>
             <div className="p-4 rounded-2xl bg-white border border-line/80 hover:border-forest/40 hover:-translate-y-0.5 transition-all shadow-2xs">
               <span className="text-[10px] font-bold uppercase tracking-wider text-forest block">Bebas Sewa</span>
@@ -128,7 +128,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSelectPhoto, onOpenR
             <div className="mt-5 pt-4 border-t border-line space-y-2.5 text-xs">
               <div className="flex items-center justify-between py-1">
                 <span className="text-ink-muted">Unit 01 (Putra):</span>
-                <span className="font-semibold text-ink">Panakkukang, Makassar</span>
+                <span className="font-semibold text-ink">Mariso, Makassar</span>
               </div>
               <div className="flex items-center justify-between py-1">
                 <span className="text-ink-muted">Unit 02 (Putri):</span>

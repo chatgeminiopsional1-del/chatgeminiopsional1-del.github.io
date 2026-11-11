@@ -44,7 +44,7 @@ export const CivicFooter: React.FC = () => {
               <div className="p-3 bg-white/60 border border-line rounded-lg">
                 <strong className="text-forest font-serif block text-[13px] mb-1">Unit Asrama Putra (Aspura):</strong>
                 <p className="text-ink/80 leading-relaxed mb-1.5">
-                  Jl. Anggrek I No. 15, Paropo, Kec. Panakkukang, Kota Makassar, Sulawesi Selatan 90233
+                  Jl. Anggrek II No. 14, Bontorannu, Kec. Mariso, Kota Makassar, Sulawesi Selatan 90123
                 </p>
                 <a
                   href="https://www.google.com/maps/place/Aspura+hpmt+kab+jeneponto/data=!4m2!3m1!1s0x0:0x4ca1b970d4be393c"

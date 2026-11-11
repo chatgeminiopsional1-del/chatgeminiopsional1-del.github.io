@@ -50,9 +50,9 @@ export const DORMITORY_UNITS: DormitoryUnit[] = [
     name: 'Asrama Putra (Aspura) HPMT Jeneponto',
     shortName: 'Aspura HPMT',
     designation: 'Asrama Khusus Mahasiswa Putra',
-    locationArea: 'Kawasan Panakkukang',
-    fullAddress: 'Jl. Anggrek I No. 15, Paropo, Kec. Panakkukang, Kota Makassar, Sulawesi Selatan 90233',
-    landmark: 'Koridor Pettarani — Akses Tol Reformasi — Dekat Flyover Urip Sumoharjo',
+    locationArea: 'Kawasan Mariso',
+    fullAddress: 'Jl. Anggrek II No. 14, Bontorannu, Kec. Mariso, Kota Makassar, Sulawesi Selatan 90123',
+    landmark: 'Dekat Jl. Nuri / Coto Depag / Jl. KS Tubun — Akses Cepat Losari & Pusat Kota',
     environmentCharacter: 'Dinamis, strategis, dekat sentra fotokopi, perpustakaan, & kuliner ramah kantong mahasiswa',
     curfewAndSecurity: 'Akses gerbang terkontrol, tertib ronda malam komunal sesama warga',
     roomCapacity: '1 orang per kamar tidur (Kamar Mandiri)',
@@ -67,12 +67,12 @@ export const DORMITORY_UNITS: DormitoryUnit[] = [
     accentColor: 'forest',
     features: [
       'Pusat konsolidasi kader perantau Turatea',
-      'Akses cepat koridor Pettarani & Perintis',
+      'Akses cepat pusat kota & kampus-kampus Makassar',
       'Ruang rapat & diskusi kaderisasi',
       'Koneksi Wi-Fi broadband 24 jam'
     ],
     description:
-      'Berfungsi sebagai pusat konsolidasi kader putra dan hunian mahasiswa yang menempuh pendidikan di koridor timur dan tengah Makassar. Berdekatan dengan jalur transportasi utama dan kampus-kampus besar.'
+      'Berfungsi sebagai pusat konsolidasi kader putra dan hunian mahasiswa yang menempuh pendidikan di kawasan Mariso, Kota Makassar. Berdekatan dengan jalur transportasi utama dan kampus-kampus besar.'
   },
   {
     id: 'aspuri',
