@@ -34,7 +34,7 @@ export const FacilitiesLedger: React.FC = () => {
           <div className="lg:col-span-7">
             <div className="p-5 sm:p-6 bg-white border border-forest/20 rounded-2xl shadow-xs text-sm text-ink/85 leading-relaxed">
               <strong className="text-forest font-bold text-base block mb-2">
-                Ketentuan Masuk &amp; Status Biaya Wisma:
+                Ketentuan Masuk &amp; Status Biaya Asrama:
               </strong>
               <p className="mb-3 text-xs sm:text-sm">
                 Prinsip tinggal di Asrama HPMT adalah nirlaba dan berasaskan kekeluargaan. Syarat masuk adalah kontribusi perawatan fasilitas sebesar <strong className="text-ink font-bold">Rp1.500.000</strong> yang dibayarkan satu kali saat resmi diterima, dan warga tidak dipungut biaya sewa kamar bulanan sampai lulus kuliah. Seluruh dana tersebut dialokasikan penuh untuk pemeliharaan dan pengadaan fasilitas fisik asrama bersama.

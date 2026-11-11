@@ -6,7 +6,7 @@ interface MobileBottomNavProps {
 
 const NAV_SECTIONS = [
   { id: 'warta', href: '#', label: 'Warta', icon: 'home' },
-  { id: 'direktori', href: '#dua-wisma', label: 'Direktori', icon: 'book' },
+  { id: 'direktori', href: '#dua-asrama', label: 'Direktori', icon: 'book' },
   { id: 'fasilitas', href: '#kehidupan-fasilitas', label: 'Fasilitas', icon: 'list' },
   { id: 'kontak', href: '#kontak-silaturahmi', label: 'Kontak', icon: 'chat' },
 ] as const;
@@ -43,7 +43,7 @@ export const MobileBottomNav: React.FC<MobileBottomNavProps> = ({ onOpenRegistra
 
   // Track active section based on scroll position
   useEffect(() => {
-    const sectionIds = ['dua-wisma', 'kehidupan-fasilitas', 'manifesto-filosofi', 'alur-pendaftaran', 'kontak-silaturahmi'];
+    const sectionIds = ['dua-asrama', 'kehidupan-fasilitas', 'manifesto-filosofi', 'alur-pendaftaran', 'kontak-silaturahmi'];
 
     const handleScroll = () => {
       const scrollY = window.scrollY + 120; // offset for sticky header
@@ -57,7 +57,7 @@ export const MobileBottomNav: React.FC<MobileBottomNavProps> = ({ onOpenRegistra
       for (const id of sectionIds) {
         const el = document.getElementById(id);
         if (el && el.offsetTop <= scrollY) {
-          if (id === 'dua-wisma') current = 'direktori';
+          if (id === 'dua-asrama') current = 'direktori';
           else if (id === 'kehidupan-fasilitas') current = 'fasilitas';
           else if (id === 'kontak-silaturahmi') current = 'kontak';
         }

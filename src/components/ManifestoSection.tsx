@@ -35,7 +35,7 @@ export const ManifestoSection: React.FC = () => {
             </div>
             <div className={`reveal delay-200 ${visible ? 'visible' : ''}`}>
               <p>
-                Ketika kiriman beras terlambat dari kampung, sepiring nasi dibagi bertiga di beranda wisma. Ketika tugas akhir dan skripsi membentur jalan buntu, para senior dan kawan sekamar mendampingi tanpa sekat feodal. Asrama bukan tempat berbisnis kos-kosan; asrama adalah kawah candradimuka agar generasi muda Turatea pulang dengan kehormatan utuh dan ilmu yang mengabdi pada rakyat.
+                Ketika kiriman beras terlambat dari kampung, sepiring nasi dibagi bertiga di beranda asrama. Ketika tugas akhir dan skripsi membentur jalan buntu, para senior dan kawan sekamar mendampingi tanpa sekat feodal. Asrama bukan tempat berbisnis kos-kosan; asrama adalah kawah candradimuka agar generasi muda Turatea pulang dengan kehormatan utuh dan ilmu yang mengabdi pada rakyat.
               </p>
             </div>
           </div>

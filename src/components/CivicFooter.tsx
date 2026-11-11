@@ -38,7 +38,7 @@ export const CivicFooter: React.FC = () => {
           {/* Col 2: Alamat Rinci */}
           <div className="md:col-span-4 space-y-3 text-xs">
             <span className="font-bold text-ink uppercase tracking-wider block text-xs mb-2">
-              Alamat Resmi Dua Wisma
+              Alamat Resmi Dua Asrama
             </span>
             <div className="space-y-4">
               <div className="p-3 bg-white/60 border border-line rounded-lg">
@@ -87,8 +87,8 @@ export const CivicFooter: React.FC = () => {
                 </a>
               </li>
               <li>
-                <a className="hover:text-forest transition-colors inline-block" href="#dua-wisma">
-                  Direktori Wisma Aspura &amp; Aspuri
+                <a className="hover:text-forest transition-colors inline-block" href="#dua-asrama">
+                  Direktori Asrama Aspura &amp; Aspuri
                 </a>
               </li>
               <li>

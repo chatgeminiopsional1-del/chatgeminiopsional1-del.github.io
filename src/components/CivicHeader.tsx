@@ -20,7 +20,7 @@ export const CivicHeader: React.FC<CivicHeaderProps> = ({ onOpenRegistration }) 
 
   const navLinks = [
     { label: 'Kehidupan Warga', href: '#kehidupan-asrama' },
-    { label: 'Wisma Aspura & Aspuri', href: '#dua-wisma' },
+    { label: 'Asrama Putra & Putri', href: '#dua-asrama' },
     { label: 'Fasilitas & Iuran', href: '#kehidupan-fasilitas' },
     { label: 'Siri\' na Pacce', href: '#manifesto-filosofi' },
     { label: 'Tanya Jawab', href: '#alur-pendaftaran' },

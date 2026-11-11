@@ -19,7 +19,7 @@ export const ContactSection: React.FC = () => {
               Kontak Koordinator &amp; Silaturahmi
             </h2>
             <p className="text-xs sm:text-sm text-ink-muted leading-relaxed max-w-xl mb-6">
-              Apakah Anda calon mahasiswa asal Butta Turatea yang baru tiba di Makassar? Atau orang tua dan alumni yang ingin bertandang silaturahmi ke wisma? Koordinator dan pengurus asrama senantiasa menerima kedatangan Anda dengan tangan terbuka.
+              Apakah Anda calon mahasiswa asal Butta Turatea yang baru tiba di Makassar? Atau orang tua dan alumni yang ingin bertandang silaturahmi ke asrama? Koordinator dan pengurus asrama senantiasa menerima kedatangan Anda dengan tangan terbuka.
             </p>
 
             {/* Structured Contact Units for Aspura & Aspuri */}
@@ -103,7 +103,7 @@ export const ContactSection: React.FC = () => {
             <div className="mt-8 pt-5 border-t border-line text-xs sm:text-sm text-ink-muted">
               <span className="font-bold text-ink block mb-1">Panduan Rute Perjalanan dari Jeneponto:</span>
               <p className="leading-relaxed text-ink/85">
-                Dari wilayah Kab. Jeneponto (Binamu / Kelara / Rumbia / Bangkala / Tarowang), tumpangi armada angkutan umum ke Makassar. Turun di Terminal Mallengkerang atau persimpangan Alauddin / Pettarani, kemudian lanjutkan dengan transportasi daring langsung menuju alamat wisma yang dituju.
+                Dari wilayah Kab. Jeneponto (Binamu / Kelara / Rumbia / Bangkala / Tarowang), tumpangi armada angkutan umum ke Makassar. Turun di Terminal Mallengkerang atau persimpangan Alauddin / Pettarani, kemudian lanjutkan dengan transportasi daring langsung menuju alamat asrama yang dituju.
               </p>
             </div>
           </div>

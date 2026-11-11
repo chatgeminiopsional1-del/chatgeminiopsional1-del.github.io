@@ -23,7 +23,7 @@ export const WismaDirectory: React.FC<WismaDirectoryProps> = ({ onSelectUnitForR
       className={`max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16 py-14 sm:py-20 reveal ${
         headerVisible ? 'visible' : ''
       }`}
-      id="dua-wisma"
+      id="dua-asrama"
       ref={headerRef as React.RefObject<HTMLElement>}
     >
       {/* Section Header */}
@@ -33,7 +33,7 @@ export const WismaDirectory: React.FC<WismaDirectoryProps> = ({ onSelectUnitForR
             Dua Unit Domisili Mahasiswa
           </span>
           <h2 className="font-serif text-2xl sm:text-4xl text-ink font-bold tracking-tight">
-            Direktori Wisma Asrama HPMT
+            Direktori Asrama HPMT
           </h2>
         </div>
         <p className="text-xs sm:text-sm text-ink-muted max-w-lg leading-relaxed">
@@ -63,7 +63,7 @@ export const WismaDirectory: React.FC<WismaDirectoryProps> = ({ onSelectUnitForR
               : 'text-ink-muted hover:text-ink hover:bg-white/60 active:scale-[0.98]'
           }`}
         >
-          Wisma Putra (Panakkukang)
+          Asrama Putra (Panakkukang)
         </button>
         <button
           type="button"
@@ -74,7 +74,7 @@ export const WismaDirectory: React.FC<WismaDirectoryProps> = ({ onSelectUnitForR
               : 'text-ink-muted hover:text-ink hover:bg-white/60 active:scale-[0.98]'
           }`}
         >
-          Wisma Putri (Minasa Upa)
+          Asrama Putri (Minasa Upa)
         </button>
       </div>
 
@@ -88,7 +88,7 @@ export const WismaDirectory: React.FC<WismaDirectoryProps> = ({ onSelectUnitForR
               <div className="flex items-center justify-between gap-2 border-b border-line pb-3.5 mb-4">
                 <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-forest/10 text-forest uppercase tracking-wider">
                   <span className="w-2 h-2 rounded-full bg-forest" />
-                  {aspura.code} • Wisma Putra
+                  {aspura.code} • Asrama Putra
                 </span>
                 <span className="text-xs text-ink-subtle font-medium">{aspura.locationArea}</span>
               </div>
@@ -202,7 +202,7 @@ export const WismaDirectory: React.FC<WismaDirectoryProps> = ({ onSelectUnitForR
               <div className="flex items-center justify-between gap-2 border-b border-line pb-3.5 mb-4">
                 <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-[#8f5727]/10 text-[#8f5727] uppercase tracking-wider">
                   <span className="w-2 h-2 rounded-full bg-[#8f5727]" />
-                  {aspuri.code} • Wisma Putri
+                  {aspuri.code} • Asrama Putri
                 </span>
                 <span className="text-xs text-ink-subtle font-medium">{aspuri.locationArea}</span>
               </div>

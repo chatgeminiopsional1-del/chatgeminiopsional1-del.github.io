@@ -63,10 +63,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSelectPhoto, onOpenR
               <span aria-hidden="true" className="text-base group-hover:translate-x-1 transition-transform">→</span>
             </button>
             <a
-              href="#dua-wisma"
+              href="#dua-asrama"
               className="inline-flex items-center justify-center gap-2 min-h-[48px] px-5 py-3.5 border border-line bg-white/90 text-ink text-sm font-semibold rounded-xl hover:border-forest/50 hover:bg-white active:scale-[0.98] transition-all duration-150 shadow-2xs w-full sm:w-auto"
             >
-              <span>Lihat Wisma Putra &amp; Putri</span>
+              <span>Lihat Asrama Putra &amp; Putri</span>
               <span aria-hidden="true" className="text-xs">↓</span>
             </a>
             <a
@@ -84,7 +84,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSelectPhoto, onOpenR
           {/* 4 Modern Pillar Cards */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3.5 mt-8 sm:mt-10 pt-6 sm:pt-8 border-t border-line">
             <div className="p-4 rounded-2xl bg-white border border-line/80 hover:border-forest/40 hover:-translate-y-0.5 transition-all shadow-2xs">
-              <span className="text-[10px] font-bold uppercase tracking-wider text-forest block">2 Wisma Resmi</span>
+              <span className="text-[10px] font-bold uppercase tracking-wider text-forest block">2 Asrama Resmi</span>
               <span className="text-sm font-bold text-ink mt-1 block">Aspura &amp; Aspuri</span>
               <span className="text-[11px] text-ink-subtle mt-0.5 block leading-tight">Panakkukang &amp; Minasa Upa</span>
             </div>
@@ -169,7 +169,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSelectPhoto, onOpenR
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-6 gap-2">
           <div>
             <span className="text-[11px] font-bold uppercase tracking-widest text-forest block mb-1">
-              Dokumentasi Fisik Wisma
+              Dokumentasi Fisik Asrama
             </span>
             <h2 className="font-serif text-2xl sm:text-3xl font-bold text-ink">
               Potret Asli Lingkungan &amp; Ruang Hidup Warga
@@ -196,7 +196,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSelectPhoto, onOpenR
                   loading="eager"
                 />
                 <div className="absolute top-3 left-3 bg-forest/90 text-white text-[11px] font-medium px-2.5 py-1 rounded-md backdrop-blur-xs">
-                  Foto Resmi Wisma
+                  Foto Resmi Asrama
                 </div>
                 <div className="absolute top-3 right-3 bg-white/90 text-ink text-xs px-2.5 py-1 rounded-md border border-line font-medium opacity-0 group-hover:opacity-100 transition-opacity">
                   Perbesar ↗

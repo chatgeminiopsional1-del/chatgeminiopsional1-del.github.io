@@ -136,7 +136,7 @@ export const RegistrationFlowModal: React.FC<RegistrationFlowModalProps> = ({
               Identitas asal Jeneponto &amp; kampus.
             </div>
             <div className="p-2.5 border border-line rounded-lg bg-paper">
-              <strong className="text-forest block font-bold">2. Silaturahmi Wisma</strong>
+              <strong className="text-forest block font-bold">2. Silaturahmi Asrama</strong>
               Datang bertamu &amp; silaturahmi langsung.
             </div>
             <div className="p-2.5 border border-line rounded-lg bg-paper">
@@ -174,7 +174,7 @@ export const RegistrationFlowModal: React.FC<RegistrationFlowModalProps> = ({
           <form onSubmit={handleSubmit} className="space-y-4 text-xs">
             {/* Unit Selection */}
             <div>
-              <label className="font-bold text-ink block mb-2">Pilih Unit Wisma Asrama *</label>
+              <label className="font-bold text-ink block mb-2">Pilih Unit Asrama *</label>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <label
                   className={`flex items-center gap-2.5 p-3.5 border rounded-xl cursor-pointer transition-all ${
@@ -452,7 +452,7 @@ export const RegistrationFlowModal: React.FC<RegistrationFlowModalProps> = ({
             </div>
 
             <p className="text-xs text-ink-subtle pt-2">
-              Pengurus asrama akan membalas pesan Anda mengenai jadwal penerimaan dan silaturahmi langsung di wisma {targetUnit.locationArea}.
+              Pengurus asrama akan membalas pesan Anda mengenai jadwal penerimaan dan silaturahmi langsung di asrama {targetUnit.locationArea}.
             </p>
           </div>
         )}

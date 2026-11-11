@@ -53,7 +53,7 @@ export const ImageLightbox: React.FC<ImageLightboxProps> = ({ photo, onClose, on
     <div
       role="dialog"
       aria-modal="true"
-      aria-label="Penampil Foto Dokumentasi Wisma"
+      aria-label="Penampil Foto Dokumentasi Asrama"
       className={`fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-ink/85 backdrop-blur-md transition-opacity duration-200 ${
         mounted ? 'opacity-100' : 'opacity-0'
       }`}
@@ -73,7 +73,7 @@ export const ImageLightbox: React.FC<ImageLightboxProps> = ({ photo, onClose, on
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-forest" />
             <span className="text-[11px] uppercase font-bold tracking-widest text-forest">
-              Arsip Visual Wisma ({currentIndex + 1} / {ARCHIVAL_PHOTOS.length})
+              Arsip Visual Asrama ({currentIndex + 1} / {ARCHIVAL_PHOTOS.length})
             </span>
           </div>
           <button

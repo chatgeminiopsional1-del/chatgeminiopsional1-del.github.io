@@ -49,7 +49,7 @@ export const DORMITORY_UNITS: DormitoryUnit[] = [
     code: 'Unit 01 • ASPURA',
     name: 'Asrama Putra (Aspura) HPMT Jeneponto',
     shortName: 'Aspura HPMT',
-    designation: 'Wisma Khusus Mahasiswa Putra',
+    designation: 'Asrama Khusus Mahasiswa Putra',
     locationArea: 'Kawasan Panakkukang',
     fullAddress: 'Jl. Anggrek I No. 15, Paropo, Kec. Panakkukang, Kota Makassar, Sulawesi Selatan 90233',
     landmark: 'Koridor Pettarani — Akses Tol Reformasi — Dekat Flyover Urip Sumoharjo',
@@ -79,7 +79,7 @@ export const DORMITORY_UNITS: DormitoryUnit[] = [
     code: 'Unit 02 • ASPURI',
     name: 'Asrama Putri (Aspuri) HPMT Jeneponto',
     shortName: 'Aspuri HPMT',
-    designation: 'Wisma Khusus Mahasiswi Putri',
+    designation: 'Asrama Khusus Mahasiswi Putri',
     locationArea: 'Kawasan Minasa Upa, Rappocini',
     fullAddress: 'Jl. Minasa Upa No. 9 Blok B1, Karunrung, Kec. Rappocini, Kota Makassar, Sulawesi Selatan 90221',
     landmark: 'Dekat Kampus UNM Parangtambung / Gunung Sari & Jalur Sultan Alauddin',
@@ -110,13 +110,13 @@ export const FACILITIES_DATA: FacilityItem[] = [
   {
     id: 'biaya-masuk-fasilitas',
     no: '01',
-    name: 'Biaya Masuk Fasilitas Wisma (Sekali Sampai Lulus)',
+    name: 'Biaya Masuk Fasilitas Asrama (Sekali Sampai Lulus)',
     category: 'pokok',
     costStatus: 'Rp1.500.000 (Sekali Sampai Lulus)',
     monthlyCost: 0,
     isOptional: false,
     description:
-      'Syarat kontribusi wajib saat resmi diterima masuk asrama. Bebas biaya sewa kamar bulanan sampai lulus kuliah. Seluruh dana digunakan untuk pemeliharaan dan pengadaan fasilitas fisik wisma bersama.'
+      'Syarat kontribusi wajib saat resmi diterima masuk asrama. Bebas biaya sewa kamar bulanan sampai lulus kuliah. Seluruh dana digunakan untuk pemeliharaan dan pengadaan fasilitas fisik asrama bersama.'
   },
   {
     id: 'air',
@@ -212,7 +212,7 @@ export const ARCHIVAL_PHOTOS: ArchivalPhoto[] = [
   {
     id: 'gate',
     title: 'Plang Gerbang Masuk Asrama Putri HPMT Kab. Jeneponto',
-    location: 'Dokumentasi Wisma Aspuri, Makassar',
+    location: 'Dokumentasi Asrama Aspuri, Makassar',
     caption: 'Pintu gerbang utama berpagar kokoh yang menjadi penanda identitas resmi mahasiswa Turatea di Makassar.',
     url: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD1GksOEX4xE3R-eYX36ItaxYcUgOTzWbEG4omirVzNM6GutwPElJVIx8LYpZTIA4Jembw3XRJYj22iGv-uiZ_t8BxBMLOu_nKgxiFZ7szD01Ims961wKm8U3Feu2QJTdor_4w81a0cAQRHN2xDpluy8VTXBPZJTCV8hnYtZtjNTNoC0jidvGp4Z7Vm3gIlz3KWEmHeJ83lqCXG8uDNT-1bPXLxp3-hdXLULCPLTOpcpHS-p4RkmPvSTPZmhRnNDyVJQpM',
     aspect: '16/10'
@@ -220,8 +220,8 @@ export const ARCHIVAL_PHOTOS: ArchivalPhoto[] = [
   {
     id: 'gazebo',
     title: 'Pendopo Diskusi Larut Malam di Gazebo',
-    location: 'Area Halaman Wisma Asrama',
-    caption: 'Pusat kebersamaan warga wisma bertukar kabar perkuliahan, belajar bersama, dan musyawarah harian.',
+    location: 'Area Halaman Asrama',
+    caption: 'Pusat kebersamaan warga asrama bertukar kabar perkuliahan, belajar bersama, dan musyawarah harian.',
     url: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCrNYcQ2dv69TedEQtEjCDUJYYEq_fAEANmOJFlLiyOGPeqyeF42fZDpngV9_lyCaNb_CBDWL-j2-6vobAETvSGsxr0ljeaU0fBZDuyB-rC9G9jRDNQM2GRb-ARWpgp2XUwJ1zJPRRVlD0xE_LeuRbuLTKEGN_2ogNOcvdse9zAIoD0lSgsmPPsbvhuHCV85dfYMPra4r3EIPS5Eukvlg42m0Kc5rZmZLS0Jh33IPmB-4Cnr-vnsNmwAK55Wj6StR4y164',
     aspect: '16/9'
   },
@@ -276,7 +276,7 @@ export const FAQ_ITEMS = [
   {
     question: 'Sampai semester berapa batas pendaftaran warga asrama baru?',
     answer:
-      'Pendaftaran terbuka maksimal untuk mahasiswa semester 3. Bagi mahasiswa yang berada di atas semester 3, berlaku ketentuan dan pertimbangan khusus dari pengurus asrama saat silaturahmi ke wisma (seperti komitmen keaktifan organisasi HPMT, rekomendasi, dan musyawarah koordinator wisma).'
+      'Pendaftaran terbuka maksimal untuk mahasiswa semester 3. Bagi mahasiswa yang berada di atas semester 3, berlaku ketentuan dan pertimbangan khusus dari pengurus asrama saat silaturahmi ke asrama (seperti komitmen keaktifan organisasi HPMT, rekomendasi, dan musyawarah koordinator asrama).'
   },
   {
     question: 'Bagaimana aturan jam malam bagi penghuni Aspura dan Aspuri?',
@@ -286,6 +286,6 @@ export const FAQ_ITEMS = [
   {
     question: 'Apakah orang tua atau keluarga dari Jeneponto boleh berkunjung menginap?',
     answer:
-      'Tentu boleh. Orang tua kandung atau sanak saudara dari kampung halaman yang berkunjung ke Makassar diperkenankan singgah dan bertamu dengan melapor kepada koordinator wisma setempat.'
+      'Tentu boleh. Orang tua kandung atau sanak saudara dari kampung halaman yang berkunjung ke Makassar diperkenankan singgah dan bertamu dengan melapor kepada koordinator asrama setempat.'
   }
 ];
